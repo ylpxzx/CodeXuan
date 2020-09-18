@@ -1,8 +1,14 @@
 <template>
-  <div class="q-pa-md test" style="width: 30%; min-width: 375px">
+  <div class="q-pa-md test" style="width: 30%;min-width: 375px">
     <div class="row">
-      <div class="col-12" style="height: 190px; width: 100%; margin-bottom: 10px">
-        <q-img class="rounded-borders shadow-24" style="height: 100%;background: #aa4b6b;background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);">
+      <div class="col-12" style="height: 190px;width: 100%;margin-bottom: 10px">
+        <q-img
+          class="rounded-borders shadow-up-23"
+          style="
+            height: 100%;
+            background: #aa4b6b;background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+            background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99)"
+        >
           <div class="absolute-full text-subtitle2 flex flex-center">
             码轩博文
           </div>
@@ -11,7 +17,14 @@
     </div>
     <div class="row">
       <div class="col-3" style="height: 380px; margin-right: 10px">
-        <q-img class="rounded-borders shadow-24" style="height: 100%; background: #c94b4b;background: -webkit-linear-gradient(to right, #c94b4b, #4b134f);background: linear-gradient(to right, #c94b4b, #4b134f)">
+        <q-img
+          class="rounded-borders shadow-24"
+          style="
+            height: 100%;
+            background: #c94b4b;
+            background: -webkit-linear-gradient(to right, #c94b4b, #4b134f);
+            background: linear-gradient(to right, #c94b4b, #4b134f)"
+        >
           <div class="absolute-full text-subtitle2 flex flex-center">
             码轩项目
           </div>
@@ -22,17 +35,17 @@
           <div class="col" style="height: 230px; margin-bottom: 10px">
             <div class="q-pa-md shadow-24">
               <q-carousel
-                      v-model="slide"
-                      swipeable
-                      animated
-                      padding
-                      :autoplay="autoplay"
-                      navigation
-                      navigation-icon="radio_button_unchecked"
-                      @mouseenter="autoplay = false"
-                      @mouseleave="autoplay = true"
-                      height="230px"
-                      class="bg-purple text-white rounded-borders"
+                v-model="slide"
+                swipeable
+                animated
+                padding
+                :autoplay="autoplay"
+                navigation
+                navigation-icon="radio_button_unchecked"
+                @mouseenter="autoplay = false"
+                @mouseleave="autoplay = true"
+                height="230px"
+                class="bg-purple text-white rounded-borders"
               >
                 <q-carousel-slide name="style" class="text-center">
                   <q-scroll-area class="fit">
@@ -42,7 +55,6 @@
                     </div>
                   </q-scroll-area>
                 </q-carousel-slide>
-
                 <q-carousel-slide name="tv" class="text-center">
                   <q-scroll-area class="fit">
                     <q-icon name="live_tv" size="56px" />
@@ -51,7 +63,6 @@
                     </div>
                   </q-scroll-area>
                 </q-carousel-slide>
-
                 <q-carousel-slide name="layers" class="text-center">
                   <q-scroll-area class="fit">
                     <q-icon name="layers" size="56px" />
@@ -60,7 +71,6 @@
                     </div>
                   </q-scroll-area>
                 </q-carousel-slide>
-
                 <q-carousel-slide name="map" class="text-center">
                   <q-scroll-area class="fit">
                     <q-icon name="terrain" size="56px" />
@@ -74,30 +84,34 @@
           </div>
         </div>
         <div class="row">
-            <div class="col" style="height: 140px; margin-right: 10px">
-              <q-img class="rounded-borders shadow-24"
-                     style="
-                     height: 100%;
-                     background: #23074d;
-                     background: -webkit-linear-gradient(to right, #23074d, #cc5333);
-                     background: linear-gradient(to right, #23074d, #cc5333)">
-                <div class="absolute-full text-subtitle2 flex flex-center">
-                  码轩兴趣
-                </div>
-              </q-img>
-            </div>
-            <div class="col" style="height: 140px">
-              <q-img class="rounded-borders shadow-24"
-                     style="
-                     height: 100%;
-                     background: #355c7d;
-                     background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
-                     background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)">
-                <div class="absolute-full text-subtitle2 flex flex-center">
-                  码轩简介
-                </div>
-              </q-img>
-            </div>
+          <div class="col" style="height: 140px; margin-right: 10px">
+            <q-img
+              class="rounded-borders shadow-24"
+              style="
+                height: 100%;
+                background: #23074d;
+                background: -webkit-linear-gradient(to right, #23074d, #cc5333);
+                background: linear-gradient(to right, #23074d, #cc5333)"
+            >
+              <div class="absolute-full text-subtitle2 flex flex-center">
+                码轩兴趣
+              </div>
+            </q-img>
+          </div>
+          <div class="col" style="height: 140px">
+            <q-img
+              class="rounded-borders shadow-24"
+              style="
+                 height: 100%;
+                 background: #355c7d;
+                 background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+                 background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)"
+            >
+              <div class="absolute-full text-subtitle2 flex flex-center">
+                码轩简介
+              </div>
+            </q-img>
+          </div>
         </div>
       </div>
     </div>
@@ -121,18 +135,17 @@
 <script>
 export default {
   name: "HelloWorld",
-  data () {
+  data() {
     return {
-      slide: 'style',
+      slide: "style",
       autoplay: true,
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
-    }
+      lorem:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo."
+    };
   },
   watch: {
-    vertical (val) {
-      this.navPos = val === true
-              ? 'right'
-              : 'bottom'
+    vertical(val) {
+      this.navPos = val === true ? "right" : "bottom";
     }
   }
 };
