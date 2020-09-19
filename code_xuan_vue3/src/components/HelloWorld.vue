@@ -164,7 +164,7 @@ export default {
           post: "记录经验，包括遇到的问题、学到的知识"
         },
         Code: {
-          img: "https://placeimg.com/500/300/nature",
+          img: "",
           name: "Code",
           title: "码轩项目",
           post: "分享有趣的项目"
@@ -176,7 +176,7 @@ export default {
           post: "记录美好与兴趣"
         },
         Resume: {
-          img: "https://cdn.quasar.dev/img/parallax2.jpg",
+          img: "",
           name: "Resume",
           title: "码轩简历",
           post: "记录个人简历"
