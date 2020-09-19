@@ -1,34 +1,43 @@
 <template>
-  <div class="q-pa-md test" style="width: 30%;min-width: 375px">
+  <div class="q-pa-md index-style">
     <div class="row">
-      <div class="col-12" style="height: 190px;width: 100%;margin-bottom: 10px">
+      <div
+        class="col-12 blog-style rounded-borders shadow-up-23"
+        style="height: 190px;width: 100%;margin-bottom: 10px"
+      >
         <q-img
-          class="rounded-borders shadow-up-23"
-          style="
-            height: 100%;
-            background: #aa4b6b;background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
-            background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99)"
+          v-bind:style="background_style('Blog')"
+          v-bind:src="content['Blog'].img"
         >
-          <div class="absolute-full text-subtitle2 flex flex-center">
-            码轩博文
-          </div>
+          <span class="absolute-full text-h6 text-bold flex flex-center">
+            {{ content["Blog"]["name"] }}
+          </span>
         </q-img>
+        <div class="box-content">
+          <h3 class="title">{{ content["Blog"]["title"] }}</h3>
+          <span class="post">
+            {{ content["Blog"]["post"] }}
+          </span>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-3" style="height: 380px; margin-right: 10px">
+      <div
+        class="col-3 blog-style rounded-borders shadow-24"
+        style="height: 380px; margin-right: 10px"
+      >
         <q-img
-          class="rounded-borders shadow-24"
-          style="
-            height: 100%;
-            background: #c94b4b;
-            background: -webkit-linear-gradient(to right, #c94b4b, #4b134f);
-            background: linear-gradient(to right, #c94b4b, #4b134f)"
+          v-bind:style="background_style('Code')"
+          v-bind:src="content['Code'].img"
         >
-          <div class="absolute-full text-subtitle2 flex flex-center">
-            码轩项目
-          </div>
+          <span class="absolute-full text-h6 text-bold flex flex-center">
+            Code
+          </span>
         </q-img>
+        <div class="box-content">
+          <h3 class="title">{{ content["Code"]["title"] }}</h3>
+          <span class="post">{{ content["Code"]["post"] }}</span>
+        </div>
       </div>
       <div class="col">
         <div class="row">
@@ -45,37 +54,31 @@
                 @mouseenter="autoplay = false"
                 @mouseleave="autoplay = true"
                 height="230px"
-                class="bg-purple text-white rounded-borders"
+                class="text-white rounded-borders"
               >
-                <q-carousel-slide name="style" class="text-center">
+                <q-carousel-slide
+                  v-for="(swiper, item) in index_swiper"
+                  :key="item"
+                  v-bind:name="swiper['slide_name']"
+                  class="text-center"
+                  v-bind:class="
+                    swiper['icon']['icon_state'] ? swiper['color'] : ''
+                  "
+                  v-bind:img-src="
+                    swiper['icon']['icon_state'] ? '' : swiper['img']
+                  "
+                >
                   <q-scroll-area class="fit">
-                    <q-icon name="style" size="56px" />
+                    <q-icon
+                      v-bind:name="
+                        swiper['icon']['icon_state']
+                          ? swiper['icon']['icon_str']
+                          : ''
+                      "
+                      size="56px"
+                    />
                     <div class="q-mt-md">
-                      {{ lorem }}
-                    </div>
-                  </q-scroll-area>
-                </q-carousel-slide>
-                <q-carousel-slide name="tv" class="text-center">
-                  <q-scroll-area class="fit">
-                    <q-icon name="live_tv" size="56px" />
-                    <div class="q-mt-md">
-                      {{ lorem }}
-                    </div>
-                  </q-scroll-area>
-                </q-carousel-slide>
-                <q-carousel-slide name="layers" class="text-center">
-                  <q-scroll-area class="fit">
-                    <q-icon name="layers" size="56px" />
-                    <div class="q-mt-md">
-                      {{ lorem }}
-                    </div>
-                  </q-scroll-area>
-                </q-carousel-slide>
-                <q-carousel-slide name="map" class="text-center">
-                  <q-scroll-area class="fit">
-                    <q-icon name="terrain" size="56px" />
-                    <div class="q-mt-md">
-                      {{ lorem }}
+                      {{ swiper["content"] }}
                     </div>
                   </q-scroll-area>
                 </q-carousel-slide>
@@ -84,33 +87,39 @@
           </div>
         </div>
         <div class="row">
-          <div class="col" style="height: 140px; margin-right: 10px">
+          <div
+            class="col blog-style rounded-borders shadow-24"
+            style="height: 140px; margin-right: 10px"
+          >
             <q-img
-              class="rounded-borders shadow-24"
-              style="
-                height: 100%;
-                background: #23074d;
-                background: -webkit-linear-gradient(to right, #23074d, #cc5333);
-                background: linear-gradient(to right, #23074d, #cc5333)"
+              v-bind:style="background_style('Interest')"
+              v-bind:src="content['Interest'].img"
             >
-              <div class="absolute-full text-subtitle2 flex flex-center">
-                码轩兴趣
-              </div>
+              <span class="absolute-full text-h6 text-bold flex flex-center">
+                Interest
+              </span>
             </q-img>
+            <div class="box-content">
+              <h3 class="title">{{ content["Interest"]["title"] }}</h3>
+              <span class="post">{{ content["Interest"]["post"] }}</span>
+            </div>
           </div>
-          <div class="col" style="height: 140px">
+          <div
+            class="col blog-style rounded-borders shadow-24"
+            style="height: 140px"
+          >
             <q-img
-              class="rounded-borders shadow-24"
-              style="
-                 height: 100%;
-                 background: #355c7d;
-                 background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
-                 background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84)"
+              v-bind:style="background_style('Resume')"
+              v-bind:src="content['Resume'].img"
             >
-              <div class="absolute-full text-subtitle2 flex flex-center">
-                码轩简介
-              </div>
+              <span class="absolute-full text-h6 text-bold flex flex-center">
+                Resume
+              </span>
             </q-img>
+            <div class="box-content">
+              <h3 class="title">{{ content["Resume"]["title"] }}</h3>
+              <span class="post">{{ content["Resume"]["post"] }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -119,17 +128,7 @@
 </template>
 
 <style lang="sass" scoped>
-.test
-  position: absolute
-  top: 50%
-  left: 50%
-  -webkit-transform: translate(-50%, -50%)
-  -moz-transform: translate(-50%, -50%)
-  -ms-transform: translate(-50%, -50%)
-  -o-transform: translate(-50%, -50%)
-  transform: translate(-50%, -50%)
-.q-pa-md
-  padding: 0
+@import "../styles/sass_style/index"
 </style>
 
 <script>
@@ -139,13 +138,88 @@ export default {
     return {
       slide: "style",
       autoplay: true,
-      lorem:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo."
+      background_color: {
+        Blog: {
+          left: "#00ffee",
+          top: "#07b8ac"
+        },
+        Code: {
+          left: "#ffaa54",
+          top: "#d66f09"
+        },
+        Interest: {
+          left: "#bfff5e",
+          top: "#97eb1a"
+        },
+        Resume: {
+          left: "#64d2fa",
+          top: "#14ace3"
+        }
+      },
+      content: {
+        Blog: {
+          img: "https://cdn.quasar.dev/img/parallax2.jpg",
+          name: "Blog",
+          title: "码轩博文",
+          post: "记录经验，包括遇到的问题、学到的知识"
+        },
+        Code: {
+          img: "https://placeimg.com/500/300/nature",
+          name: "Code",
+          title: "码轩项目",
+          post: "分享有趣的项目"
+        },
+        Interest: {
+          img: "https://cdn.quasar.dev/img/parallax2.jpg",
+          name: "Interest",
+          title: "码轩兴趣",
+          post: "记录美好与兴趣"
+        },
+        Resume: {
+          img: "https://cdn.quasar.dev/img/parallax2.jpg",
+          name: "Resume",
+          title: "码轩简历",
+          post: "记录个人简历"
+        }
+      },
+      index_swiper: [
+        {
+          slide_name: "style",
+          color: "bg-blue",
+          icon: { icon_state: true, icon_str: "style" },
+          content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+          img: "https://placeimg.com/500/300/nature"
+        },
+        {
+          slide_name: "tv",
+          color: "bg-green",
+          icon: { icon_state: false, icon_str: "layers" },
+          content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+          img: "https://cdn.quasar.dev/img/mountains.jpg"
+        },
+        {
+          slide_name: "layers",
+          color: "bg-red",
+          icon: { icon_state: true, icon_str: "terrain" },
+          content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+          img: "https://placeimg.com/500/300/nature"
+        },
+        {
+          slide_name: "map",
+          color: "bg-cyan",
+          icon: { icon_state: true, icon_str: "live_tv" },
+          content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+          img: "https://cdn.quasar.dev/img/mountains.jpg"
+        }
+      ]
     };
   },
-  watch: {
-    vertical(val) {
-      this.navPos = val === true ? "right" : "bottom";
+  methods: {
+    background_style(name) {
+      // 在v-bind中使用的方法，尽量不要用计算属性，因为会无效，暂时未找到原因
+      const left_color = this.background_color[name].left;
+      const top_color = this.background_color[name].top;
+      return `background: linear-gradient(to left top,${left_color},${top_color})`;
     }
   }
 };
