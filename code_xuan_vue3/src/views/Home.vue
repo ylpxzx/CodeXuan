@@ -3,22 +3,24 @@
     <div class="row">
       <div
         class="col-12 blog-style rounded-borders shadow-up-23"
-        style="height: 190px;width: 100%;margin-bottom: 10px"
+        style="height: 210px;width: 100%;margin-bottom: 10px"
       >
-        <q-img
-          v-bind:style="background_style('Blog')"
-          v-bind:src="content['Blog'].img"
-        >
-          <span class="absolute-full text-h6 text-bold flex flex-center">
-            {{ content["Blog"]["name"] }}
-          </span>
-        </q-img>
-        <div class="box-content">
-          <h3 class="title">{{ content["Blog"]["title"] }}</h3>
-          <span class="post">
-            {{ content["Blog"]["post"] }}
-          </span>
-        </div>
+        <router-link :to="{ name: content[0].url_name }">
+          <q-img
+            v-bind:style="background_style(content[0].name)"
+            v-bind:src="content[0].img"
+          >
+            <span class="absolute-full text-h6 text-bold flex flex-center">
+              {{ content[0].name }}
+            </span>
+          </q-img>
+          <div class="box-content">
+            <h3 class="title">{{ content[0].title }}</h3>
+            <span class="post">
+              {{ content[0].post }}
+            </span>
+          </div>
+        </router-link>
       </div>
     </div>
     <div class="row">
@@ -26,18 +28,20 @@
         class="col-3 blog-style rounded-borders shadow-24"
         style="height: 380px; margin-right: 10px"
       >
-        <q-img
-          v-bind:style="background_style('Code')"
-          v-bind:src="content['Code'].img"
-        >
-          <span class="absolute-full text-h6 text-bold flex flex-center">
-            Code
-          </span>
-        </q-img>
-        <div class="box-content">
-          <h3 class="title">{{ content["Code"]["title"] }}</h3>
-          <span class="post">{{ content["Code"]["post"] }}</span>
-        </div>
+        <router-link :to="{ name: content[1].url_name }">
+          <q-img
+            v-bind:style="background_style(content[1].name)"
+            v-bind:src="content[1].img"
+          >
+            <span class="absolute-full text-h6 text-bold flex flex-center">
+              Code
+            </span>
+          </q-img>
+          <div class="box-content">
+            <h3 class="title">{{ content[1].title }}</h3>
+            <span class="post">{{ content[1].post }}</span>
+          </div>
+        </router-link>
       </div>
       <div class="col">
         <div class="row">
@@ -91,35 +95,39 @@
             class="col blog-style rounded-borders shadow-24"
             style="height: 140px; margin-right: 10px"
           >
-            <q-img
-              v-bind:style="background_style('Interest')"
-              v-bind:src="content['Interest'].img"
-            >
-              <span class="absolute-full text-h6 text-bold flex flex-center">
-                Interest
-              </span>
-            </q-img>
-            <div class="box-content">
-              <h3 class="title">{{ content["Interest"]["title"] }}</h3>
-              <span class="post">{{ content["Interest"]["post"] }}</span>
-            </div>
+            <router-link :to="{ name: content[2].url_name }">
+              <q-img
+                v-bind:style="background_style(content[2].name)"
+                v-bind:src="content[2].img"
+              >
+                <span class="absolute-full text-h6 text-bold flex flex-center">
+                  Interest
+                </span>
+              </q-img>
+              <div class="box-content">
+                <h3 class="title">{{ content[2].title }}</h3>
+                <span class="post">{{ content[2].post }}</span>
+              </div>
+            </router-link>
           </div>
           <div
             class="col blog-style rounded-borders shadow-24"
             style="height: 140px"
           >
-            <q-img
-              v-bind:style="background_style('Resume')"
-              v-bind:src="content['Resume'].img"
-            >
-              <span class="absolute-full text-h6 text-bold flex flex-center">
-                Resume
-              </span>
-            </q-img>
-            <div class="box-content">
-              <h3 class="title">{{ content["Resume"]["title"] }}</h3>
-              <span class="post">{{ content["Resume"]["post"] }}</span>
-            </div>
+            <router-link :to="{ name: content[3].url_name }">
+              <q-img
+                v-bind:style="background_style(content[3].name)"
+                v-bind:src="content[3].img"
+              >
+                <span class="absolute-full text-h6 text-bold flex flex-center">
+                  Resume
+                </span>
+              </q-img>
+              <div class="box-content">
+                <h3 class="title">{{ content[3].title }}</h3>
+                <span class="post">{{ content[3].post }}</span>
+              </div>
+            </router-link>
           </div>
         </div>
       </div>
@@ -128,7 +136,7 @@
 </template>
 
 <style lang="sass" scoped>
-@import "../styles/sass_style/index"
+@import "styles/sass_style/home"
 </style>
 
 <script>
@@ -139,50 +147,61 @@ export default {
       slide: "style",
       autoplay: true,
       background_color: {
+        // Home页在没有提供图片的前提下，采用渐变色
         Blog: {
           left: "#00ffee",
-          top: "#07b8ac"
+          top: "#07b8ac",
+          state: false
         },
         Code: {
           left: "#ffaa54",
-          top: "#d66f09"
+          top: "#d66f09",
+          state: true
         },
         Interest: {
           left: "#bfff5e",
-          top: "#97eb1a"
+          top: "#97eb1a",
+          state: false
         },
         Resume: {
           left: "#64d2fa",
-          top: "#14ace3"
+          top: "#14ace3",
+          state: true
         }
       },
-      content: {
-        Blog: {
+      content: [
+        // Home页各组件模块数据信息
+        {
           img: "https://cdn.quasar.dev/img/parallax2.jpg",
           name: "Blog",
+          url_name: "blog",
           title: "码轩博文",
           post: "记录经验，包括遇到的问题、学到的知识"
         },
-        Code: {
+        {
           img: "",
           name: "Code",
+          url_name: "code",
           title: "码轩项目",
           post: "分享有趣的项目"
         },
-        Interest: {
+        {
           img: "https://cdn.quasar.dev/img/parallax2.jpg",
           name: "Interest",
+          url_name: "interest",
           title: "码轩兴趣",
           post: "记录美好与兴趣"
         },
-        Resume: {
+        {
           img: "",
           name: "Resume",
+          url_name: "resume",
           title: "码轩简历",
           post: "记录个人简历"
         }
-      },
+      ],
       index_swiper: [
+        // Home页轮播数据信息
         {
           slide_name: "style",
           color: "bg-blue",
@@ -217,9 +236,15 @@ export default {
   methods: {
     background_style(name) {
       // 在v-bind中使用的方法，尽量不要用计算属性，因为会无效，暂时未找到原因
-      const left_color = this.background_color[name].left;
-      const top_color = this.background_color[name].top;
-      return `background: linear-gradient(to left top,${left_color},${top_color})`;
+      let background_result = "";
+      if (this.background_color[name].state) {
+        const left_color = this.background_color[name].left;
+        const top_color = this.background_color[name].top;
+        background_result = `background: linear-gradient(to left top,${left_color},${top_color})`; // ``符号为es6的字符格式化方法
+      } else {
+        background_result = "";
+      }
+      return background_result;
     }
   }
 };

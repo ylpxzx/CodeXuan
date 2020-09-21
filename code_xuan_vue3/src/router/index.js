@@ -7,7 +7,27 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("../views/Home")
+    component: () => import("views/Home")
+  },
+  {
+    path: "/resume",
+    name: "resume",
+    component: () => import("views/pages/resume/index")
+  },
+  {
+    path: "/interest",
+    name: "interest",
+    component: () => import("views/pages/interest/index")
+  },
+  {
+    path: "/code",
+    name: "code",
+    component: () => import("views/pages/code/index")
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: () => import("views/pages/blog/index")
   },
   {
     path: "/about",
