@@ -12,7 +12,7 @@ const routes = [
   {
     path: "/resume",
     name: "resume",
-    component: () => import("views/pages/resume/index")
+    component: () => import("views/pages/resume/TabResume/index")
   },
   {
     path: "/interest",

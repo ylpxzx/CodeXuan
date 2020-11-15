@@ -135,10 +135,6 @@
   </div>
 </template>
 
-<style lang="sass" scoped>
-@import "styles/sass_style/home"
-</style>
-
 <script>
 export default {
   name: "Home",
@@ -249,3 +245,7 @@ export default {
   }
 };
 </script>
+
+<style lang="sass" scoped>
+@import "styles/sass_style/home"
+</style>
