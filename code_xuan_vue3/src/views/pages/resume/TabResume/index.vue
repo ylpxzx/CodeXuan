@@ -523,6 +523,8 @@
 // import $ from "jquery"
 import "bootstrap/dist/js/bootstrap.min"
 import "jquery/dist/jquery"
+import "assets/utils/resume/script"
+import "assets/utils/resume/jquery-type"
 // import "../utils/resume/script"
 // import "../utils/resume/jquery-type.js"
 export default {
