@@ -1,4 +1,5 @@
 
+const webpack = require("webpack")
 // 配置路径别名
 const path = require("path");
 function resolve(dir) {
@@ -23,4 +24,14 @@ module.exports = {
         .set("views", resolve("./src/views"))
         .set("styles", resolve("./src/styles"))
   },
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $ : "jquery",
+        jQuery : "jquery",
+        "window.jQuery" : "jquery",
+        Popper: ["popper.js","default"]
+      })
+    ]
+  }
 };

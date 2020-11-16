@@ -11,7 +11,10 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "animate.css": "^4.1.1",
+    "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "quasar": "^1.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
