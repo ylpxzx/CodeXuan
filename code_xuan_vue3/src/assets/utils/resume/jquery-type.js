@@ -27,7 +27,7 @@
 
     "use strict";
 
-    var Typed = function(el, options) {
+    const Typed = function (el, options) {
 
         // chosen element to manipulate text
         this.el = $(el);
@@ -99,9 +99,7 @@
 
     Typed.prototype = {
 
-        constructor: Typed
-
-        ,
+        constructor: Typed,
         init: function() {
             // begin the loop w/ first current string (global self.strings)
             // current string will be passed as an argument each time after this
