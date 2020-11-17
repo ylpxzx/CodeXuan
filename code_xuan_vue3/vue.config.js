@@ -6,6 +6,7 @@ function resolve(dir) {
 }
 
 module.exports = {
+  // lintOnSave: false,
   publicPath: './',
   pluginOptions: {
     quasar: {
@@ -16,21 +17,17 @@ module.exports = {
   transpileDependencies: ["quasar"],
   // 配置路径别名
   chainWebpack: config => {
+    config.plugin('provide').use(webpack.ProvidePlugin, [{
+      $: 'jquery',
+      jquery: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }]),
     config.resolve.alias
       .set("@", resolve("./src"))
       .set("assets", resolve("./src/assets"))
       .set("components", resolve("./src/components"))
       .set("views", resolve("./src/views"))
       .set("styles", resolve("./src/styles"))
-  },
-  configureWebpack: {
-//支持jquery
-    plugins: [
-      new webpack.ProvidePlugin({
-        $:"jquery",
-        jQuery:"jquery",
-        "windows.jQuery":"jquery"
-      })
-]
-},
+  }
 };

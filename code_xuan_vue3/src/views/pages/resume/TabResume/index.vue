@@ -8,25 +8,40 @@
             <div class="author-info" :style="{backgroundImage: 'url(' + require('@/assets/images/background/3.jpg') + ')' }">
               <div class="image"><img src="~assets/images/resource/user.png" alt=""></div>
               <div class="author">
-                <h3>Mrs xzx</h3>
-                <div class="designation">
-                  Hi i’m
-                  <div class="typing-title">
-                    <p>a <strong>web developer.</strong></p>
-                    <p>a <strong>web Designer.</strong></p>
-                    <p>a <strong>photographer.</strong></p>
+                <div class="column items-center">
+                  <div class="col">
+                    <h3>Mahira Rashid</h3>
                   </div>
-                  <span class="typed-title"></span>
+                  <div class="col">
+                    <div class="designation">
+                      Hi i’m
+                      <div class="typing-title">
+                        <vue-typed-js :strings="typing_option" :loop="true">
+                          <p><strong class="typing"></strong></p>
+                        </vue-typed-js>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="link-btn">
                 <a href="http://www.17sucai.com/" class="theme-btn btn-style-one">Download CV</a>
               </div>
               <ul class="social-icon-two">
-                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                <li><a href="#"><q-icon name="fa fa-facebook">
+                  <q-tooltip
+                    transition-show="flip-right"
+                    transition-hide="flip-left"
+                    content-class="bg-indigo"
+                    :offset="[10, 10]"
+                  >
+                    提示
+                  </q-tooltip>
+                </q-icon></a></li>
+                <li><a href="#"><q-icon name="fa fa-twitter"></q-icon></a></li>
+                <li><a href="#"><q-icon name="fa fa-pinterest"></q-icon></a></li>
+                <li><a href="#"><q-icon name="fa fa-google-plus"></q-icon></a></li>
+                <li><a href="#"><q-icon name="fa fa-dribbble"></q-icon></a></li>
               </ul>
             </div>
             <div class="card-inner-box">
@@ -39,6 +54,7 @@
                   <li><a href="#work"><i class="flaticon-tools"></i>Works</a></li>
                   <li><a href="#blog"><i class="flaticon-blog"></i>Blog</a></li>
                   <li><a href="#contact"><i class="flaticon-send-mail"></i>Contact</a></li>
+                  <li><a href="#test"><i class="flaticon-send-mail"></i>Test</a></li>
                 </ul>
               </header>
 
@@ -47,15 +63,20 @@
                 <div class="card-inner wow fadeInUp" data-wow-duration="2s">
                   <div class="image"><img src="~assets/images/resource/user.png" alt=""></div>
                   <div class="author">
-                    <h3>Mahira Rashid</h3>
-                    <div class="designation">
-                      Hi i’m
-                      <div class="typing-title">
-                        <p>a <strong>web developer.</strong></p>
-                        <p>a <strong>web Designer.</strong></p>
-                        <p>a <strong>photographer.</strong></p>
+                    <div class="column items-center">
+                      <div class="col">
+                        <h3>Mahira Rashid</h3>
                       </div>
-                      <span class="typed-title"></span>
+                      <div class="col">
+                        <div class="designation">
+                          Hi i’m
+                          <div class="typing-title">
+                            <vue-typed-js :strings="typing_option" :loop="true">
+                              <p><strong class="typing"></strong></p>
+                            </vue-typed-js>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore mega aliqua enim minim veniam.</div>
@@ -64,18 +85,18 @@
                     <a href="#" class="theme-btn btn-style-two">Hire Me</a>
                   </div>
                   <ul class="social-icon-two">
-                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                    <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
-                    <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                    <li><a href="#"><q-icon name="fa fa-facebook"></q-icon></a></li>
+                    <li><a href="#"><q-icon name="fa fa-twitter"></q-icon></a></li>
+                    <li><a href="#"><q-icon name="fa fa-pinterest"></q-icon></a></li>
+                    <li><a href="#"><q-icon name="fa fa-google-plus"></q-icon></a></li>
+                    <li><a href="#"><q-icon name="fa fa-dribbble"></q-icon></a></li>
                   </ul>
                 </div>
               </div>
               <!-- end item -->
 
               <!-- card item -->
-              <div class="card-about card-item" id="about" :style="{backgroundImage: 'url(' + require('@/assets/images/background/2.jpg') + ')' }">
+              <div class="card-about card-item" id="about">
                 <div class="card-inner">
                   <h4 class="title">About Me</h4>
                   <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore mega aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip commodo reprehenderit.</div>
@@ -148,7 +169,7 @@
               <!-- end item -->
 
               <!-- card item -->
-              <div class="card-resume card-item" id="resume" :style="{backgroundImage: 'url(' + require('@/assets/images/background/2.jpg') + ')' }">
+              <div class="card-resume card-item" id="resume">
                 <div class="card-inner">
                   <h4 class="title">Resume</h4>
                   <div class="row clearfix">
@@ -225,7 +246,7 @@
               </div>
               <!-- end item -->
               <!-- card item -->
-              <div class="card-services card-item" id="services" :style="{backgroundImage: 'url(' + require('@/assets/images/background/2.jpg') + ')' }">
+              <div class="card-services card-item" id="services">
                 <div class="card-inner">
                   <h4 class="title">Services</h4>
                   <div class="row">
@@ -276,7 +297,7 @@
               </div>
               <!-- end item -->
               <!-- card item -->
-              <div class="card-projects card-item" id="work" :style="{backgroundImage: 'url(' + require('@/assets/images/background/2.jpg') + ')' }">
+              <div class="card-projects card-item" id="work">
                 <div class="card-inner">
                   <h4 class="title">Works</h4>
                   <div class="row">
@@ -381,7 +402,7 @@
               </div>
               <!-- end item -->
               <!-- card item -->
-              <div class="card-blog card-item" id="blog" :style="{backgroundImage: 'url(' + require('@/assets/images/background/2.jpg') + ')' }">
+              <div class="card-blog card-item" id="blog">
                 <div class="card-inner">
                   <h4 class="title">Blog</h4>
                   <div class="news-block">
@@ -439,7 +460,7 @@
               </div>
               <!-- end item -->
               <!-- card item -->
-              <div class="card-contact card-item" id="contact" :style="{backgroundImage: 'url(' + require('@/assets/images/background/2.jpg') + ')' }">
+              <div class="card-contact card-item" id="contact">
                 <div class="card-inner">
                   <h3 class="title">Contact</h3>
                   <h4>Keep In Touch</h4>
@@ -508,6 +529,59 @@
               </div>
               <!-- end item -->
 
+              <!-- card item -->
+              <div class="card-contact card-item" id="test">
+                <div class="card-inner">
+                  <h3 class="title">Contact</h3>
+                  <h4>Keep In Touch</h4>
+                  <div class="q-pa-md row items-start q-gutter-md">
+                    <q-card class="my-card" flat bordered>
+                      <q-card-section horizontal>
+                        <q-card-section>
+                          {{ lorem }}
+                        </q-card-section>
+
+                        <q-img
+                                class="col-5"
+                                src="https://cdn.quasar.dev/img/parallax2.jpg"
+                        />
+                      </q-card-section>
+                    </q-card>
+
+                    <q-card class="my-card" flat bordered>
+                      <q-card-section horizontal>
+                        <q-card-section>
+                          {{ lorem }}
+                        </q-card-section>
+
+                        <q-separator vertical />
+
+                        <q-card-section>
+                          {{ lorem }}
+                        </q-card-section>
+                      </q-card-section>
+                    </q-card>
+
+                    <q-card class="my-card" flat bordered>
+                      <q-card-section horizontal>
+                        <q-img
+                                class="col"
+                                src="https://cdn.quasar.dev/img/mountains.jpg"
+                        />
+
+                        <q-card-actions vertical class="justify-around q-px-md">
+                          <q-btn flat round color="red" icon="favorite" />
+                          <q-btn flat round color="accent" icon="bookmark" />
+                          <q-btn flat round color="primary" icon="share" />
+                        </q-card-actions>
+                      </q-card-section>
+                    </q-card>
+                  </div>
+
+                </div>
+              </div>
+              <!-- end item -->
+
             </div>
           </div>
 
@@ -520,17 +594,68 @@
 </template>
 
 <script>
-// import $ from "jquery"
-import "bootstrap/dist/js/bootstrap.min"
-import "jquery/dist/jquery"
-import "assets/utils/resume/script"
-import "assets/utils/resume/jquery-type"
-// import "../utils/resume/script"
-// import "../utils/resume/jquery-type.js"
+import "jquery"
+import $ from "jquery"
+import "jquery.nicescroll"
 export default {
   name: "index",
-  mounted() {
+  data() {
+    return {
+      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      typing_option: ['First text', 'Second Text']
+    }
   },
+  mounted() {
+    const container = $('.card-outer .container');
+    const innerbox = $('.card-outer .card-inner-box');
+    const card_items = $('.card-item');
+    const animation_in = container.data('animation-in');
+    const animation_out = container.data('animation-out');
+    $('.main-menu').on('click', 'a', function(){
+      console.log('test:dds')
+      /* vars */
+      const id = $(this).attr('href');
+      const card_item = $(id);
+      const menu_items = $('.main-menu li');
+      const menu_item_home = $('.main-menu li.home');
+      const menu_item = $(this).closest('li');
+
+      /* if desktop */
+      if(!menu_item.hasClass('active') & $('#home').length) {
+
+        /* close card items */
+        menu_items.removeClass('active');
+        container.find(card_items).removeClass('animated '+animation_in);
+
+        if($(container).hasClass('opened')) {
+          container.find(card_items).addClass('animated '+animation_out);
+        }
+
+        /* open card item */
+        menu_item.addClass('active');
+        container.addClass('opened');
+        container.find(card_item).removeClass('animated '+animation_out);
+        container.find(card_item).addClass('animated '+animation_in);
+
+        $(card_items).addClass('hide-item');
+
+        $(card_item).removeClass('hide-item');
+        $(card_item).addClass('active');
+      }
+
+      if(!menu_item_home.hasClass('active')) {
+        $(innerbox).addClass('offsetleft');
+      }else {
+        $(innerbox).removeClass('offsetleft');
+      }
+
+      return false;
+    });
+    $(".card-inner").niceScroll({autohidemode: "scroll"});
+    $("#test-box").niceScroll();
+  },
+  methods: {
+  }
 }
 </script>
 
@@ -538,4 +663,12 @@ export default {
 @import "~styles/resume_style/bootstrap.css";
 @import "~styles/resume_style/style.css";
 @import "~styles/resume_style/responsive.css";
+.my-card{
+  width: 100%;
+  max-width: 350px
+}
+
+::-webkit-scrollbar {
+  width:0px;
+}
 </style>
