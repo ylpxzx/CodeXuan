@@ -10,13 +10,13 @@
               <div class="author">
                 <div class="column items-center">
                   <div class="col">
-                    <h3>Mahira Rashid</h3>
+                    <h3>{{resumeInfo.name}}</h3>
                   </div>
                   <div class="col">
-                    <div class="designation">
-                      Hi i’m
+                    <div class="designation" style="margin-bottom: 7px">
+                      {{resumeInfo.shortOpen}}
                       <div class="typing-title">
-                        <vue-typed-js :strings="typing_option" :loop="true">
+                        <vue-typed-js :strings="resumeInfo.introduce" :loop="true">
                           <p><strong class="typing"></strong></p>
                         </vue-typed-js>
                       </div>
@@ -65,13 +65,13 @@
                   <div class="author">
                     <div class="column items-center">
                       <div class="col">
-                        <h3>Mahira Rashid</h3>
+                        <h3>{{resumeInfo.name}}</h3>
                       </div>
                       <div class="col">
                         <div class="designation">
-                          Hi i’m
+                          {{resumeInfo.shortOpen}}
                           <div class="typing-title">
-                            <vue-typed-js :strings="typing_option" :loop="true">
+                            <vue-typed-js :strings="resumeInfo.introduce" :loop="true">
                               <p><strong class="typing"></strong></p>
                             </vue-typed-js>
                           </div>
@@ -79,7 +79,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore mega aliqua enim minim veniam.</div>
+                  <div class="text" style="margin-bottom: 0px">{{resumeInfo.motto}}</div>
                   <div class="link-btn">
                     <a href="#" class="theme-btn btn-style-one">Download CV</a>
                     <a href="#" class="theme-btn btn-style-two">Hire Me</a>
@@ -99,20 +99,21 @@
               <div class="card-about card-item" id="about">
                 <div class="card-inner">
                   <h4 class="title">About Me</h4>
-                  <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore mega aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip commodo reprehenderit.</div>
+                  <div class="text">{{authorInfo.introduce}}</div>
                   <div class="info-list">
                     <div class="row">
                       <div class="col-md-6">
                         <ul class="list-style-one">
-                          <li><strong>Name:</strong>  Mahira Rashid</li>
-                          <li><strong>Phone:</strong>  254 - 2563 - 2154</li>
-                          <li><strong>Address:</strong>  San francisco, USA</li>
+                          <li><strong>Name:</strong> {{authorInfo.name}}</li>
+                          <li><strong>Phone:</strong> {{authorInfo.phone}}</li>
+                          <li><strong>Address:</strong> {{authorInfo.address}}</li>
                         </ul>
                       </div>
                       <div class="col-md-6">
                         <ul class="list-style-one">
-                          <li><strong>Email:</strong>  mahirarashid@gmail.com</li>
-                          <li><strong>Freelance:</strong>  Available</li>
+                          <li><strong>Email:</strong> {{authorInfo.email}}</li>
+                          <li><strong>Professional:</strong>  {{authorInfo.professional}}</li>
+                          <li><strong>Hobby:</strong>  {{authorInfo.hobby}}</li>
                         </ul>
                       </div>
                     </div>
@@ -120,48 +121,38 @@
                   <h4 class="title">Skills</h4>
                   <div class="row">
                     <!-- About Block -->
-                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                      <div class="inner-box">
-                        <div class="graph-outer">
-                          <input type="text" class="dial" data-fgColor="#9147ff" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                          <div class="inner-text count-box"><span class="count-text" data-stop="75" data-speed="2000"></span>%</div>
-                        </div>
-                        <h3>Design</h3>
-                      </div>
+                    <div class="col-md-12" v-for="(item, index) in authorInfo.skill" :key="index">
+                      <q-card flat>
+                        <q-card-section>
+                          <div class="text-h5"><strong>{{item.type}}</strong></div>
+                        </q-card-section>
+                        <q-separator inset />
+                        <q-card-section class="q-pt-md">
+                          <div class="row">
+                            <div class="skill-block col-md-3 q-pt-sm" v-for="(skill, key) in item.category" :key="key">
+                              <div class="inner-box">
+                                <div class="graph-outer">
+                                  <q-circular-progress
+                                          show-value
+                                          font-size="18px"
+                                          :value="skill.value"
+                                          size="80px"
+                                          :thickness="0.18"
+                                          :color=skill.color
+                                          track-color="grey-3"
+                                          class="q-mb-sm"
+                                  >
+                                    {{skill.value}}%
+                                  </q-circular-progress>
+                                </div>
+                                <h3 style="margin-top: 0px">{{skill.name}}</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </q-card-section>
+                      </q-card>
                     </div>
 
-                    <!-- About Block -->
-                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                      <div class="inner-box">
-                        <div class="graph-outer">
-                          <input type="text" class="dial" data-fgColor="#ff5e7e" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                          <div class="inner-text count-box"><span class="count-text" data-stop="75" data-speed="2000"></span>%</div>
-                        </div>
-                        <h3>HTML</h3>
-                      </div>
-                    </div>
-
-                    <!-- About Block -->
-                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                      <div class="inner-box">
-                        <div class="graph-outer">
-                          <input type="text" class="dial" data-fgColor="#ffc713" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                          <div class="inner-text count-box"><span class="count-text" data-stop="75" data-speed="2000"></span>%</div>
-                        </div>
-                        <h3>WordPress </h3>
-                      </div>
-                    </div>
-
-                    <!-- About Block -->
-                    <div class="skill-block col-md-3 col-sm-4 col-xs-6">
-                      <div class="inner-box">
-                        <div class="graph-outer">
-                          <input type="text" class="dial" data-fgColor="#51dbc3" data-bgColor="#f5f5f5" data-width="90" data-height="90" data-linecap="normal"  value="75">
-                          <div class="inner-text count-box"><span class="count-text" data-stop="75" data-speed="2000"></span>%</div>
-                        </div>
-                        <h3>PHP </h3>
-                      </div>
-                    </div>
                   </div>
 
                 </div>
@@ -601,8 +592,144 @@ export default {
   name: "index",
   data() {
     return {
-      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      typing_option: ['First text', 'Second Text']
+      resumeInfo: {
+        name: 'Mr.XZX',
+        shortOpen: 'Hi i\'m xzx',
+        motto: 'If you wish to succeed, you should use persistence as your good friend,experience as your reference, prudence as your brother and hope as your sentry.',
+        introduce: ['A lustful, affectionate, dashing and happy,', 'despicable and shameless good man.']
+      },
+      authorInfo: {
+        name: '谢宗鑫',
+        email: '794859685@qq.com',
+        phone: '5201314xxxx',
+        professional: 'Coder',
+        address: 'The world ---> China',
+        hobby: '看书、打球、绘画、睡觉、偷懒',
+        introduce: '年轻那会儿,喜欢阅读、喜欢绘画、喜欢球类运动,幻想着未来保守会成为一名有格调的艺术家. 但现实中,由于对黑客人物的崇拜,对新奇技术的向往,穿上了有”格调“的衬衫,走进了代码的世界.',
+        skill:[
+          {
+            type: 'Python',
+            category: [
+              {
+                name: 'Python',
+                color: 'blue',
+                value: 78
+              },
+              {
+                name: 'Django',
+                color: 'green',
+                value: 70
+              },
+              {
+                name: 'Flask',
+                color: 'orange',
+                value: 60
+              },
+              {
+                name: 'Pandas',
+                color: 'teal',
+                value: 50
+              },
+              {
+                name: '爬虫',
+                color: 'yello',
+                value: 60
+              }
+            ]
+          },
+          {
+            type: 'Java',
+            category: [
+              {
+                name: 'Java',
+                color: 'blue',
+                value: 50
+              },
+              {
+                name: 'JSP',
+                color: 'green',
+                value: 70
+              },
+              {
+                name: 'Spring',
+                color: 'orange',
+                value: 60
+              },
+              {
+                name: 'SpringMVC',
+                color: 'teal',
+                value: 50
+              },
+              {
+                name: 'SpringBoot',
+                color: 'yello',
+                value: 50
+              }
+            ]
+          },
+          {
+            type: '前端',
+            category: [
+              {
+                name: 'Vue',
+                color: 'blue',
+                value: 78
+              },
+              {
+                name: 'HTML+CSS',
+                color: 'green',
+                value: 70
+              },
+              {
+                name: 'JavaScript',
+                color: 'orange',
+                value: 60
+              },
+              {
+                name: 'Webpack',
+                color: 'teal',
+                value: 40
+              },
+              {
+                name: 'Node',
+                color: 'yello',
+                value: 30
+              }
+            ]
+          },
+          {
+            type: '数据库',
+            category: [
+              {
+                name: 'MySQL',
+                color: 'blue',
+                value: 79
+              },
+              {
+                name: 'MongDB',
+                color: 'green',
+                value: 70
+              },
+              {
+                name: 'Redis',
+                color: 'orange',
+                value: 60
+              },
+              {
+                name: 'ELS',
+                color: 'teal',
+                value: 50
+              },
+              {
+                name: '图数据库',
+                color: 'yello',
+                value: 10
+              }
+            ]
+          },
+        ]
+      },
+      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
   },
   mounted() {
