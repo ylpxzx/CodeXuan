@@ -1,22 +1,31 @@
 <template>
   <div class="page-wrapper default-version">
-
     <div class="card-outer">
       <div class="scroll-box">
-        <div class="container" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+        <div
+            class="container"
+            data-animation-in="fadeInLeft"
+            data-animation-out="fadeOutLeft"
+        >
           <div class="card-wrapper">
-            <div class="author-info" :style="{backgroundImage: 'url(' + require('@/assets/images/background/3.jpg') + ')' }">
+            <div
+                class="author-info"
+                :style="{backgroundImage: 'url(' + require('@/assets/images/background/3.jpg') + ')' }"
+            >
               <div class="image"><img src="~assets/images/resource/user.png" alt=""></div>
               <div class="author">
                 <div class="column items-center">
                   <div class="col">
-                    <h3>{{resumeInfo.name}}</h3>
+                    <h3>{{ resumeInfo.name }}</h3>
                   </div>
                   <div class="col">
                     <div class="designation" style="margin-bottom: 7px">
-                      {{resumeInfo.shortOpen}}
+                      {{ resumeInfo.shortOpen }}
                       <div class="typing-title">
-                        <vue-typed-js :strings="resumeInfo.introduce" :loop="true">
+                        <vue-typed-js
+                            :strings="resumeInfo.introduce"
+                            :loop="true"
+                        >
                           <p><strong class="typing"></strong></p>
                         </vue-typed-js>
                       </div>
@@ -49,12 +58,12 @@
                 <ul class="main-menu">
                   <li class="active home"><a class="logo" href="#home"><img src="~assets/images/logo1.png" alt=""></a></li>
                   <li><a href="#about"><i class="flaticon-social"></i>About</a></li>
-                  <li><a href="#resume"><i class="flaticon-curriculum"></i>Resume</a></li>
-                  <li><a href="#services"><i class="flaticon-layers-1"></i>Services</a></li>
-                  <li><a href="#work"><i class="flaticon-tools"></i>Works</a></li>
+                  <li><a href="#resume"><i class="flaticon-curriculum"></i>Experience</a></li>
+                  <li><a href="#services"><i class="flaticon-layers-1"></i>Skills</a></li>
+                  <li><a href="#work"><i class="flaticon-tools"></i>Projects</a></li>
                   <li><a href="#blog"><i class="flaticon-blog"></i>Blog</a></li>
                   <li><a href="#contact"><i class="flaticon-send-mail"></i>Contact</a></li>
-                  <li><a href="#test"><i class="flaticon-send-mail"></i>Test</a></li>
+                  <li><a href="#test"><i class="flaticon-send-mail"></i>Interest</a></li>
                 </ul>
               </header>
 
@@ -162,76 +171,92 @@
               <!-- card item -->
               <div class="card-resume card-item" id="resume">
                 <div class="card-inner">
-                  <h4 class="title">Resume</h4>
-                  <div class="row clearfix">
-                    <!--Column-->
-                    <div class="timeline-column col-md-6 col-sm-12 col-xs-12">
-                      <div class="inner">
-                        <div class="col-header"><div class="icon-box"><div class="icon-inner"><div class="icon"><span class="flaticon-book"></span></div></div></div> <h2>Employment</h2></div>
+                  <h4 class="title">Work Experience</h4>
+                  <div class="row">
+                      <div class="q-px-lg q-pb-md">
+                          <q-timeline :layout="layout" color="secondary">
+                              <q-timeline-entry heading>
+                                  Timeline heading
+                                  <br>
+                                  ({{$q.screen.lt.sm ? 'Dense' : ($q.screen.lt.md ? 'Comfortable' : 'Loose')}} layout)
+                              </q-timeline-entry>
 
-                        <!--Timeline Block-->
-                        <div class="timeline-block">
-                          <div class="inner-box">
-                            <h4>Web Design</h4>
-                            <div class="date"><span>1998-2000</span> / University of stuties</div>
-                            <div class="text">Exceptur sint occaecat cupidatat non proident sunt culpa. </div>
-                          </div>
-                        </div>
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 22, 1986"
+                                      side="left"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
 
-                        <!--Timeline Block-->
-                        <div class="timeline-block">
-                          <div class="inner-box">
-                            <h4>Web Development</h4>
-                            <div class="date"><span>1998-2000</span> / University of stuties</div>
-                            <div class="text">Exceptur sint occaecat cupidatat non proident sunt culpa. </div>
-                          </div>
-                        </div>
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 21, 1986"
+                                      side="right"
+                                      icon="delete"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
 
-                        <!--Timeline Block-->
-                        <div class="timeline-block">
-                          <div class="inner-box">
-                            <h4>Specialization Course</h4>
-                            <div class="date"><span>1998-2000</span> / University of stuties</div>
-                            <div class="text">Exceptur sint occaecat cupidatat non proident sunt culpa. </div>
-                          </div>
-                        </div>
+                              <q-timeline-entry heading>November, 2017</q-timeline-entry>
 
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 22, 1986"
+                                      side="left"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
+
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 22, 1986"
+                                      side="right"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
+
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 22, 1986"
+                                      side="left"
+                                      color="orange"
+                                      icon="done_all"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
+
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 22, 1986"
+                                      side="right"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
+
+                              <q-timeline-entry
+                                      title="Event Title"
+                                      subtitle="February 22, 1986"
+                                      side="left"
+                              >
+                                  <div>
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                  </div>
+                              </q-timeline-entry>
+                          </q-timeline>
                       </div>
-                    </div>
-
-                    <!--Column-->
-                    <div class="timeline-column col-md-6 col-sm-12 col-xs-12">
-                      <div class="inner">
-                        <div class="col-header"><div class="icon-box"><div class="icon-inner"><div class="icon"><span class="flaticon-case"></span></div></div></div> <h2>Experience</h2></div>
-
-                        <!--Timeline Block-->
-                        <div class="timeline-block">
-                          <div class="inner-box">
-                            <h4>Lead UI/UX Designer</h4>
-                            <div class="date"><span>2015-Present</span>  / Google inc.</div>
-                            <div class="text">Exceptur sint occaecat cupidatat non proident sunt culpa. </div>
-                          </div>
-                        </div>
-
-                        <div class="timeline-block">
-                          <div class="inner-box">
-                            <h4>Senior UI/UX Designer</h4>
-                            <div class="date"><span>2012-2014 </span> / Facebook inc.</div>
-                            <div class="text">Exceptur sint occaecat cupidatat non proident sunt culpa. </div>
-                          </div>
-                        </div>
-
-                        <div class="timeline-block">
-                          <div class="inner-box">
-                            <h4>Junior UI/UX Designer</h4>
-                            <div class="date"><span>2006-2011 </span>  / airbnb inc.</div>
-                            <div class="text">Exceptur sint occaecat cupidatat non proident sunt culpa. </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
                   </div>
                 </div>
               </div>
@@ -239,7 +264,7 @@
               <!-- card item -->
               <div class="card-services card-item" id="services">
                 <div class="card-inner">
-                  <h4 class="title">Services</h4>
+                  <h4 class="title">Skills</h4>
                   <div class="row">
                     <div class="services-block col-md-6">
                       <div class="inner-box">
@@ -290,7 +315,7 @@
               <!-- card item -->
               <div class="card-projects card-item" id="work">
                 <div class="card-inner">
-                  <h4 class="title">Works</h4>
+                  <h4 class="title">Projects</h4>
                   <div class="row">
                     <div class="projects-block col-md-6">
                       <div class="inner-box">
@@ -467,13 +492,14 @@
                       <div class="map-section">
                         <div class="home-google-map">
                           <div
-                                  class="google-map"
-                                  id="contact-google-map"
-                                  data-map-lat="40.700843"
-                                  data-map-lng="-74.004012"
-                                  data-icon-path="~assets/images/icons/map-marker.png"
-                                  data-map-title="Chester"
-                                  data-map-zoom="11" >
+                            class="google-map"
+                            id="contact-google-map"
+                            data-map-lat="40.700843"
+                            data-map-lng="-74.004012"
+                            data-icon-path="~assets/images/icons/map-marker.png"
+                            data-map-title="Chester"
+                            data-map-zoom="11"
+                          >
                           </div>
                         </div>
                       </div>
@@ -483,39 +509,63 @@
                   <!-- Contact Form -->
                   <div class="contact-form">
                     <!--Comment Form-->
-                    <form method="post" action="sendemail.php" id="contact-form">
+                    <form
+                      method="post"
+                      action="sendemail.php"
+                      id="contact-form"
+                    >
                       <div class="row clearfix">
-
                         <div class="col-md-6 form-group">
-                          <input type="text" name="username" placeholder="Name" required>
+                          <input
+                            type="text"
+                            name="username"
+                            placeholder="Name"
+                            required
+                          />
                         </div>
-
                         <div class="col-md-6 form-group">
-                          <input type="email" name="email" placeholder="Email" required>
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
                         </div>
-
                         <div class="col-md-6 form-group">
-                          <input type="text" name="subject" placeholder="Subject" required>
+                          <input
+                            type="text"
+                            name="subject"
+                            placeholder="Subject"
+                            required
+                          />
                         </div>
-
                         <div class="col-md-6 form-group">
-                          <input type="text" name="phone" placeholder="Phone" required>
+                          <input
+                            type="text"
+                            name="phone"
+                            placeholder="Phone"
+                            required
+                          />
                         </div>
-
                         <div class="col-lg-12 col-md-12 form-group">
-                          <textarea name="message" placeholder="Message"></textarea>
+                          <textarea
+                            name="message"
+                            placeholder="Message"
+                          ></textarea>
                         </div>
-
                         <div class="col-lg-12 col-md-12 form-group">
-                          <button class="theme-btn btn-style-two" type="submit" name="submit-form">Submit Now </button>
+                          <button
+                            class="theme-btn btn-style-two"
+                            type="submit"
+                            name="submit-form"
+                          >
+                            Submit Now
+                          </button>
                         </div>
-
                       </div>
                     </form>
-
                   </div>
                   <!--End Contact Form -->
-
                 </div>
               </div>
               <!-- end item -->
@@ -523,7 +573,7 @@
               <!-- card item -->
               <div class="card-contact card-item" id="test">
                 <div class="card-inner">
-                  <h3 class="title">Contact</h3>
+                  <h3 class="title">Interest</h3>
                   <h4>Keep In Touch</h4>
                   <div class="q-pa-md row items-start q-gutter-md">
                     <q-card class="my-card" flat bordered>
@@ -531,35 +581,29 @@
                         <q-card-section>
                           {{ lorem }}
                         </q-card-section>
-
                         <q-img
-                                class="col-5"
-                                src="https://cdn.quasar.dev/img/parallax2.jpg"
+                          class="col-5"
+                          src="https://cdn.quasar.dev/img/parallax2.jpg"
                         />
                       </q-card-section>
                     </q-card>
-
                     <q-card class="my-card" flat bordered>
                       <q-card-section horizontal>
                         <q-card-section>
                           {{ lorem }}
                         </q-card-section>
-
                         <q-separator vertical />
-
                         <q-card-section>
                           {{ lorem }}
                         </q-card-section>
                       </q-card-section>
                     </q-card>
-
                     <q-card class="my-card" flat bordered>
                       <q-card-section horizontal>
                         <q-img
-                                class="col"
-                                src="https://cdn.quasar.dev/img/mountains.jpg"
+                          class="col"
+                          src="https://cdn.quasar.dev/img/mountains.jpg"
                         />
-
                         <q-card-actions vertical class="justify-around q-px-md">
                           <q-btn flat round color="red" icon="favorite" />
                           <q-btn flat round color="accent" icon="bookmark" />
@@ -568,234 +612,242 @@
                       </q-card-section>
                     </q-card>
                   </div>
-
                 </div>
               </div>
               <!-- end item -->
-
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
-
   </div>
 </template>
 
 <script>
-import "jquery"
-import $ from "jquery"
-import "jquery.nicescroll"
+import "jquery";
+import $ from "jquery";
+import "jquery.nicescroll";
 export default {
   name: "index",
   data() {
     return {
       resumeInfo: {
-        name: 'Mr.XZX',
-        shortOpen: 'Hi i\'m xzx',
-        motto: 'If you wish to succeed, you should use persistence as your good friend,experience as your reference, prudence as your brother and hope as your sentry.',
-        introduce: ['A lustful, affectionate, dashing and happy,', 'despicable and shameless good man.']
+        name: "Mr.XZX",
+        shortOpen: "Hi i'm xzx",
+        motto:
+          "If you wish to succeed, you should use persistence as your good friend,experience as your reference, prudence as your brother and hope as your sentry.",
+        introduce: [
+          "A lustful, affectionate, dashing and happy,",
+          "despicable and shameless good man."
+        ]
       },
       authorInfo: {
-        name: '谢宗鑫',
-        email: '794859685@qq.com',
-        phone: '5201314xxxx',
-        professional: 'Coder',
-        address: 'The world ---> China',
-        hobby: '看书、打球、绘画、睡觉、偷懒',
-        introduce: '年轻那会儿,喜欢阅读、喜欢绘画、喜欢球类运动,幻想着未来保守会成为一名有格调的艺术家. 但现实中,由于对黑客人物的崇拜,对新奇技术的向往,穿上了有”格调“的衬衫,走进了代码的世界.',
-        skill:[
+        name: "谢宗鑫",
+        email: "794859685@qq.com",
+        phone: "5201314xxxx",
+        professional: "Coder",
+        address: "The world ---> China",
+        hobby: "看书、打球、绘画、睡觉、偷懒",
+        introduce:
+          "年轻那会儿,喜欢阅读、喜欢绘画、喜欢球类运动,幻想着未来保守会成为一名有格调的艺术家. 但现实中,由于对黑客人物的崇拜,对新奇技术的向往,穿上了有”格调“的衬衫,走进了代码的世界.",
+        skill: [
           {
-            type: 'Python',
+            type: "Python",
             category: [
               {
-                name: 'Python',
-                color: 'blue',
+                name: "Python",
+                color: "blue",
                 value: 78
               },
               {
-                name: 'Django',
-                color: 'green',
+                name: "Django",
+                color: "green",
                 value: 70
               },
               {
-                name: 'Flask',
-                color: 'orange',
+                name: "Flask",
+                color: "orange",
                 value: 60
               },
               {
-                name: 'Pandas',
-                color: 'teal',
+                name: "Pandas",
+                color: "teal",
                 value: 50
               },
               {
-                name: '爬虫',
-                color: 'yello',
+                name: "爬虫",
+                color: "yello",
                 value: 60
               }
             ]
           },
           {
-            type: 'Java',
+            type: "Java",
             category: [
               {
-                name: 'Java',
-                color: 'blue',
+                name: "Java",
+                color: "blue",
                 value: 50
               },
               {
-                name: 'JSP',
-                color: 'green',
+                name: "JSP",
+                color: "green",
                 value: 70
               },
               {
-                name: 'Spring',
-                color: 'orange',
+                name: "Spring",
+                color: "orange",
                 value: 60
               },
               {
-                name: 'SpringMVC',
-                color: 'teal',
+                name: "SpringMVC",
+                color: "teal",
                 value: 50
               },
               {
-                name: 'SpringBoot',
-                color: 'yello',
+                name: "SpringBoot",
+                color: "yello",
                 value: 50
               }
             ]
           },
           {
-            type: '前端',
+            type: "前端",
             category: [
               {
-                name: 'Vue',
-                color: 'blue',
+                name: "Vue",
+                color: "blue",
                 value: 78
               },
               {
-                name: 'HTML+CSS',
-                color: 'green',
+                name: "HTML+CSS",
+                color: "green",
                 value: 70
               },
               {
-                name: 'JavaScript',
-                color: 'orange',
+                name: "JavaScript",
+                color: "orange",
                 value: 60
               },
               {
-                name: 'Webpack',
-                color: 'teal',
+                name: "Webpack",
+                color: "teal",
                 value: 40
               },
               {
-                name: 'Node',
-                color: 'yello',
+                name: "Node",
+                color: "yello",
                 value: 30
               }
             ]
           },
           {
-            type: '数据库',
+            type: "数据库",
             category: [
               {
-                name: 'MySQL',
-                color: 'blue',
+                name: "MySQL",
+                color: "blue",
                 value: 79
               },
               {
-                name: 'MongDB',
-                color: 'green',
+                name: "MongDB",
+                color: "green",
                 value: 70
               },
               {
-                name: 'Redis',
-                color: 'orange',
+                name: "Redis",
+                color: "orange",
                 value: 60
               },
               {
-                name: 'ELS',
-                color: 'teal',
+                name: "ELS",
+                color: "teal",
                 value: 50
               },
               {
-                name: '图数据库',
-                color: 'yello',
+                name: "图数据库",
+                color: "yello",
                 value: 10
               }
             ]
-          },
+          }
         ]
       },
-      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    }
+      lorem:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    };
   },
   mounted() {
-    const container = $('.card-outer .container');
-    const innerbox = $('.card-outer .card-inner-box');
-    const card_items = $('.card-item');
-    const animation_in = container.data('animation-in');
-    const animation_out = container.data('animation-out');
-    $('.main-menu').on('click', 'a', function(){
-      console.log('test:dds')
+    const container = $(".card-outer .container");
+    const innerbox = $(".card-outer .card-inner-box");
+    const card_items = $(".card-item");
+    const animation_in = container.data("animation-in");
+    const animation_out = container.data("animation-out");
+    $(".main-menu").on("click", "a", function() {
+      console.log("test:dds");
       /* vars */
-      const id = $(this).attr('href');
+      const id = $(this).attr("href");
       const card_item = $(id);
-      const menu_items = $('.main-menu li');
-      const menu_item_home = $('.main-menu li.home');
-      const menu_item = $(this).closest('li');
+      const menu_items = $(".main-menu li");
+      const menu_item_home = $(".main-menu li.home");
+      const menu_item = $(this).closest("li");
 
       /* if desktop */
-      if(!menu_item.hasClass('active') & $('#home').length) {
-
+      if (!menu_item.hasClass("active") & $("#home").length) {
         /* close card items */
-        menu_items.removeClass('active');
-        container.find(card_items).removeClass('animated '+animation_in);
+        menu_items.removeClass("active");
+        container.find(card_items).removeClass("animated " + animation_in);
 
-        if($(container).hasClass('opened')) {
-          container.find(card_items).addClass('animated '+animation_out);
+        if ($(container).hasClass("opened")) {
+          container.find(card_items).addClass("animated " + animation_out);
         }
 
         /* open card item */
-        menu_item.addClass('active');
-        container.addClass('opened');
-        container.find(card_item).removeClass('animated '+animation_out);
-        container.find(card_item).addClass('animated '+animation_in);
+        menu_item.addClass("active");
+        container.addClass("opened");
+        container.find(card_item).removeClass("animated " + animation_out);
+        container.find(card_item).addClass("animated " + animation_in);
 
-        $(card_items).addClass('hide-item');
+        $(card_items).addClass("hide-item");
 
-        $(card_item).removeClass('hide-item');
-        $(card_item).addClass('active');
+        $(card_item).removeClass("hide-item");
+        $(card_item).addClass("active");
       }
 
-      if(!menu_item_home.hasClass('active')) {
-        $(innerbox).addClass('offsetleft');
-      }else {
-        $(innerbox).removeClass('offsetleft');
+      if (!menu_item_home.hasClass("active")) {
+        $(innerbox).addClass("offsetleft");
+      } else {
+        $(innerbox).removeClass("offsetleft");
       }
 
       return false;
     });
-    $(".card-inner").niceScroll({autohidemode: "scroll"});
+    $(".card-inner").niceScroll({ autohidemode: "scroll" });
     $("#test-box").niceScroll();
   },
-  methods: {
-  }
-}
+  computed: {
+    layout() {
+      return this.$q.screen.lt.sm
+        ? "dense"
+        : this.$q.screen.lt.md
+        ? "comfortable"
+        : "loose";
+    }
+  },
+  methods: {}
+};
 </script>
 
 <style lang="css" scoped>
 @import "~styles/resume_style/bootstrap.css";
 @import "~styles/resume_style/style.css";
 @import "~styles/resume_style/responsive.css";
-.my-card{
+.my-card {
   width: 100%;
-  max-width: 350px
+  max-width: 350px;
 }
 
 ::-webkit-scrollbar {
-  width:0px;
+  width: 0px;
 }
 </style>
