@@ -11,13 +11,14 @@ import "@quasar/extras/fontawesome-v5/fontawesome-v5.css";
 import "@quasar/extras/ionicons-v4/ionicons-v4.css";
 import "@quasar/extras/mdi-v4/mdi-v4.css";
 import "@quasar/extras/eva-icons/eva-icons.css";
-import { Quasar, QFab, QFabAction } from "quasar";
+import { Quasar, QFab, QFabAction, QChip } from "quasar";
 
 Vue.use(Quasar, {
   config: {},
   components: {
     QFab,
-    QFabAction
+    QFabAction,
+    QChip
     /* not needed if importStrategy is not 'manual' */
   },
   directives: {
