@@ -13,6 +13,7 @@ import "@quasar/extras/mdi-v4/mdi-v4.css";
 import "@quasar/extras/eva-icons/eva-icons.css";
 import { Quasar, QFab, QFabAction, QChip } from "quasar";
 
+// 前端框架插件
 Vue.use(Quasar, {
   config: {},
   components: {

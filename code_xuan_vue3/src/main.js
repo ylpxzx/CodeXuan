@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./quasar";
+import "./vue-photo-preview"
 import animate from "animate.css";
 import VueTypedJs from "vue-typed-js"
 

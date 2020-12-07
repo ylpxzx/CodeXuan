@@ -72,11 +72,12 @@
                                                     <q-card flat>
                                                         <q-card-section horizontal>
                                                             <q-card-section class="col-4">
-                                                                <q-img
-                                                                        class="rounded-borders"
-                                                                        :ratio="4/3"
-                                                                        src="https://placeimg.com/500/300/nature"
-                                                                />
+                                                                <img src="~assets/images/test_img/2001597.jpg" preview="1" class="q-img rounded-borders" style="height: 100%">
+<!--                                                                <q-img-->
+<!--                                                                        class="rounded-borders"-->
+<!--                                                                        :ratio="4/3"-->
+<!--                                                                        src="https://placeimg.com/500/300/nature"-->
+<!--                                                                />-->
                                                             </q-card-section>
                                                             <q-card-section>
                                                                 <div class="text-caption text-grey">
@@ -90,11 +91,7 @@
                                                     <q-card flat>
                                                         <q-card-section horizontal>
                                                             <q-card-section class="col-4">
-                                                                <q-img
-                                                                        class="rounded-borders"
-                                                                        :ratio="4/3"
-                                                                        src="https://placeimg.com/500/300/nature"
-                                                                />
+                                                                <img src="~assets/images/test_img/2001746.jpg" preview="2" class="q-img rounded-borders" style="height: 100%">
                                                             </q-card-section>
                                                             <q-card-section>
                                                                 <div class="text-caption text-grey">
@@ -108,11 +105,7 @@
                                                     <q-card flat>
                                                         <q-card-section horizontal>
                                                             <q-card-section class="col-4">
-                                                                <q-img
-                                                                        class="rounded-borders"
-                                                                        :ratio="4/3"
-                                                                        src="https://placeimg.com/500/300/nature"
-                                                                />
+                                                                <img src="~assets/images/test_img/2003345.jpg" preview="3" class="q-img rounded-borders" style="height: 100%">
                                                             </q-card-section>
                                                             <q-card-section>
                                                                 <div class="text-caption text-grey">
@@ -126,11 +119,7 @@
                                                     <q-card flat>
                                                         <q-card-section horizontal>
                                                             <q-card-section class="col-4">
-                                                                <q-img
-                                                                        class="rounded-borders"
-                                                                        :ratio="4/3"
-                                                                        src="https://placeimg.com/500/300/nature"
-                                                                />
+                                                                <img src="~assets/images/test_img/2005678.jpg" preview="4" class="q-img rounded-borders" style="height: 100%">
                                                             </q-card-section>
                                                             <q-card-section>
                                                                 <div class="text-caption text-grey">
@@ -519,32 +508,55 @@
                                     <q-card flat>
                                         <q-item>
                                             <q-item-section avatar>
-                                                <q-avatar>
-                                                    <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+                                                <q-avatar size="80px">
+                                                    <img src="~assets/images/test_img/avater.jpg" preview="6">
                                                 </q-avatar>
                                             </q-item-section>
 
                                             <q-item-section>
-                                                <q-item-label>名片</q-item-label>
+                                                <q-item-label>狼性书生</q-item-label>
                                                 <q-item-label caption>
                                                     Mr.XZX
                                                 </q-item-label>
+                                                <q-item-label caption>
+                                                    {{ record1 }}
+                                                </q-item-label>
                                             </q-item-section>
                                         </q-item>
-
-                                        <q-separator />
-
-                                        <q-card-section horizontal>
-                                            <q-card-section>
-                                                {{ lorem }}
-                                            </q-card-section>
-
-                                            <q-separator vertical />
-
-                                            <q-card-section class="col-4">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elits.
-                                                Lorem ipsum dolor sit amet,
-                                            </q-card-section>
+                                        <q-card-section class="text-caption text-grey">
+                                            {{ record }}
+                                        </q-card-section>
+                                        <q-card-section align="center" class="q-pt-none">
+                                            <q-chip dense size="sm" clickable href="#" color="primary" text-color="white">
+                                                Github
+                                            </q-chip>
+                                            <q-chip dense size="sm" clickable href="#" color="primary" text-color="white">
+                                                CSDN
+                                            </q-chip>
+                                            <q-chip dense size="sm" clickable href="#" color="primary" text-color="white">
+                                                知乎
+                                            </q-chip>
+                                            <q-chip dense size="sm" clickable href="#" color="primary" text-color="white">
+                                                掘金
+                                            </q-chip>
+                                        </q-card-section>
+                                        <q-card-section align="center" class="q-pt-none">
+                                            <q-chip dense square>
+                                                <q-avatar rounded style="width: 29px" color="red" text-color="white">1520</q-avatar>
+                                                文章
+                                            </q-chip>
+                                            <q-chip dense square>
+                                                <q-avatar rounded style="width: 29px" color="primary" text-color="white">50</q-avatar>
+                                                分类
+                                            </q-chip>
+                                            <q-chip dense square>
+                                                <q-avatar rounded style="width: 29px" color="deep-orange" text-color="white">50</q-avatar>
+                                                标签
+                                            </q-chip>
+                                            <q-chip dense square>
+                                                <q-avatar rounded style="width: 29px" color="deep-purple" text-color="white">150</q-avatar>
+                                                转载
+                                            </q-chip>
                                         </q-card-section>
                                     </q-card>
                                 </div>
@@ -691,6 +703,15 @@
         name: "blogHome",
         data () {
             return {
+                icons: [
+                    'navigation',
+                    'add_a_photo',
+                    'camera',
+                    'camera_front',
+                    'my_location'
+                ],
+                record1: '努力变强, 然后越来越嚣张.',
+                record: '  Mr.XZX 个人站点, 记录点滴, 记录成长, 分享经验, 拥抱爱和正义, 维护世界和平!',
                 fabPos: [ 18, 18 ],
                 draggingFab: false,
                 thumbStyle: {
