@@ -19,5 +19,6 @@ export default {
 
 <style lang="sass" scoped>
 .blog_container
+  min-width: 300px
   background-color: #f5f7f9
 </style>
