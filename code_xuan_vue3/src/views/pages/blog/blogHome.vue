@@ -138,7 +138,7 @@
                                         <div class="q-pa-sm">
                                             <q-card flat>
                                                 <q-tabs
-                                                        v-model="tab"
+                                                        v-model="sidTab"
                                                         dense
                                                         class="text-grey"
                                                         active-color="primary"
@@ -146,27 +146,580 @@
                                                         align="left"
                                                         narrow-indicator
                                                 >
-                                                    <q-tab name="mails" label="Mails" />
-                                                    <q-tab name="alarms" label="Alarms" />
-                                                    <q-tab name="movies" label="Movies" />
+                                                    <q-tab name="record" label="记录" />
+                                                    <q-tab name="reprinted" label="转载" />
+                                                    <q-tab name="book" label="书荐" />
                                                 </q-tabs>
 
                                                 <q-separator />
 
-                                                <q-tab-panels v-model="tab" animated>
-                                                    <q-tab-panel name="mails">
-                                                        <div class="text-h6">Mails</div>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                <q-tab-panels v-model="sidTab" animated>
+                                                    <q-tab-panel name="record">
+                                                        <div class="row">
+                                                            <div class="col-12 col-md-4 q-pr-md">
+                                                                <div class="q-pb-sm">
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            :ratio="16/9"
+                                                                            style="height: 135px"
+                                                                            class="rounded-borders"
+                                                                    >
+                                                                        <div class="absolute-full text-subtitle2 flex flex-center">
+                                                                            Caption
+                                                                        </div>
+                                                                    </q-img>
+                                                                </div>
+                                                                <div class="q-pb-sm">
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            :ratio="16/9"
+                                                                            style="height: 135px"
+                                                                            class="rounded-borders"
+                                                                    >
+                                                                        <div class="absolute-full text-subtitle2 flex flex-center">
+                                                                            Caption
+                                                                        </div>
+                                                                    </q-img>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-8 q-pl-md" style="height: 270px">
+                                                                <q-list>
+                                                                    <q-item clickable v-ripple>
+                                                                        <q-item-section side class="q-pr-none">
+                                                                            <q-icon size="sm" name="looks_one" color="red" class="q-pr-sm"></q-icon>
+                                                                        </q-item-section>
+                                                                        <q-item-section>
+                                                                            <q-item-label>Single line item</q-item-label>
+                                                                        </q-item-section>
+
+                                                                        <q-item-section side>
+                                                                            <q-badge color="teal" label="10121" />
+                                                                        </q-item-section>
+                                                                    </q-item>
+                                                                    <q-item clickable v-ripple>
+                                                                        <q-item-section side class="q-pr-none">
+                                                                            <q-icon size="sm" name="looks_two" color="orange" class="q-pr-sm"></q-icon>
+                                                                        </q-item-section>
+                                                                        <q-item-section>
+                                                                            <q-item-label>Single line item</q-item-label>
+                                                                        </q-item-section>
+
+                                                                        <q-item-section side>
+                                                                            <q-badge color="teal" label="10121" />
+                                                                        </q-item-section>
+                                                                    </q-item>
+                                                                    <q-item clickable v-ripple>
+                                                                        <q-item-section side class="q-pr-none">
+                                                                            <q-icon size="sm" name="looks_3" color="yellow" class="q-pr-sm"></q-icon>
+                                                                        </q-item-section>
+                                                                        <q-item-section>
+                                                                            <q-item-label>Single line item</q-item-label>
+                                                                        </q-item-section>
+
+                                                                        <q-item-section side>
+                                                                            <q-badge color="teal" label="10121" />
+                                                                        </q-item-section>
+                                                                    </q-item>
+                                                                    <q-item clickable v-ripple>
+                                                                        <q-item-section side class="q-pr-none">
+                                                                            <q-icon size="sm" name="looks_4" color="grey" class="q-pr-sm"></q-icon>
+                                                                        </q-item-section>
+                                                                        <q-item-section>
+                                                                            <q-item-label>Single line item</q-item-label>
+                                                                        </q-item-section>
+
+                                                                        <q-item-section side>
+                                                                            <q-badge color="teal" label="10121" />
+                                                                        </q-item-section>
+                                                                    </q-item>
+                                                                    <q-item clickable v-ripple>
+                                                                        <q-item-section side class="q-pr-none">
+                                                                            <q-icon size="sm" name="looks_5" color="grey" class="q-pr-sm"></q-icon>
+                                                                        </q-item-section>
+                                                                        <q-item-section>
+                                                                            <q-item-label>Single line item</q-item-label>
+                                                                        </q-item-section>
+
+                                                                        <q-item-section side>
+                                                                            <q-badge color="teal" label="10121" />
+                                                                        </q-item-section>
+                                                                    </q-item>
+                                                                    <q-item clickable v-ripple>
+                                                                        <q-item-section side class="q-pr-none">
+                                                                            <q-icon size="sm" name="looks_6" color="grey" class="q-pr-sm"></q-icon>
+                                                                        </q-item-section>
+                                                                        <q-item-section>
+                                                                            <q-item-label>Single line item</q-item-label>
+                                                                        </q-item-section>
+
+                                                                        <q-item-section side>
+                                                                            <q-badge color="teal" label="10121" />
+                                                                        </q-item-section>
+                                                                    </q-item>
+                                                                </q-list>
+                                                            </div>
+                                                        </div>
                                                     </q-tab-panel>
 
-                                                    <q-tab-panel name="alarms">
-                                                        <div class="text-h6">Alarms</div>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <q-tab-panel name="reprinted">
+                                                        <div class="row" style="height: 270px">
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-card-section>
+                                                                        <q-chip dense square color="primary" text-color="white" icon="bookmark">
+                                                                            Python
+                                                                        </q-chip>
+                                                                        <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
+                                                                            OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                                                                                OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            </q-tooltip>
+                                                                        </div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="信息" />
+                                                                        <q-space />
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section>
+                                                                                <q-chip square>作者：蓝星书生</q-chip>
+                                                                                <q-chip square>来源：知乎</q-chip>
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-card-section>
+                                                                        <q-chip dense square color="primary" text-color="white" icon="bookmark">
+                                                                            Python
+                                                                        </q-chip>
+                                                                        <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
+                                                                            OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                                                                                OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            </q-tooltip>
+                                                                        </div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="信息" />
+                                                                        <q-space />
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section>
+                                                                                <q-chip square>作者：蓝星书生</q-chip>
+                                                                                <q-chip square>来源：知乎</q-chip>
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-card-section>
+                                                                        <q-chip dense square color="primary" text-color="white" icon="bookmark">
+                                                                            Python
+                                                                        </q-chip>
+                                                                        <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
+                                                                            OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                                                                                OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            </q-tooltip>
+                                                                        </div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="信息" />
+                                                                        <q-space />
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section>
+                                                                                <q-chip square>作者：蓝星书生</q-chip>
+                                                                                <q-chip square>来源：知乎</q-chip>
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-card-section>
+                                                                        <q-chip dense square color="primary" text-color="white" icon="bookmark">
+                                                                            Python
+                                                                        </q-chip>
+                                                                        <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
+                                                                            OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                                                                                OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            </q-tooltip>
+                                                                        </div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="信息" />
+                                                                        <q-space />
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section>
+                                                                                <q-chip square>作者：蓝星书生</q-chip>
+                                                                                <q-chip square>来源：知乎</q-chip>
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-card-section>
+                                                                        <q-chip dense square color="primary" text-color="white" icon="bookmark">
+                                                                            Python
+                                                                        </q-chip>
+                                                                        <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
+                                                                            OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                                                                                OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
+                                                                            </q-tooltip>
+                                                                        </div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="信息" />
+                                                                        <q-space />
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section>
+                                                                                <q-chip square>作者：蓝星书生</q-chip>
+                                                                                <q-chip square>来源：知乎</q-chip>
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                        </div>
                                                     </q-tab-panel>
 
-                                                    <q-tab-panel name="movies">
-                                                        <div class="text-h6">Movies</div>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    <q-tab-panel name="book">
+                                                        <div class="row" style="height: 320px">
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            style="height:110px"
+                                                                    />
+
+                                                                    <q-card-section class="q-pb-none">
+                                                                        <div class="text-overline text-orange-9">莫言</div>
+                                                                        <div class="text-subtitle2 text-weight-bold q-mb-xs ellipsis">平凡的世界</div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="Share" />
+                                                                        <q-btn flat color="primary" label="Book" />
+
+                                                                        <q-space />
+
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section class="text-subitle2">
+                                                                                {{ lorem }}
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            style="height:110px"
+                                                                    />
+
+                                                                    <q-card-section class="q-pb-none">
+                                                                        <div class="text-overline text-orange-9">莫言</div>
+                                                                        <div class="text-subtitle2 text-weight-bold q-mb-xs ellipsis">平凡的世界</div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="Share" />
+                                                                        <q-btn flat color="primary" label="Book" />
+
+                                                                        <q-space />
+
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section class="text-subitle2">
+                                                                                {{ lorem }}
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            style="height:110px"
+                                                                    />
+
+                                                                    <q-card-section class="q-pb-none">
+                                                                        <div class="text-overline text-orange-9">莫言</div>
+                                                                        <div class="text-subtitle2 text-weight-bold q-mb-xs ellipsis">平凡的世界</div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="Share" />
+                                                                        <q-btn flat color="primary" label="Book" />
+
+                                                                        <q-space />
+
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section class="text-subitle2">
+                                                                                {{ lorem }}
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            style="height:110px"
+                                                                    />
+
+                                                                    <q-card-section class="q-pb-none">
+                                                                        <div class="text-overline text-orange-9">莫言</div>
+                                                                        <div class="text-subtitle2 text-weight-bold q-mb-xs ellipsis">平凡的世界</div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="Share" />
+                                                                        <q-btn flat color="primary" label="Book" />
+
+                                                                        <q-space />
+
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section class="text-subitle2">
+                                                                                {{ lorem }}
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            style="height:110px"
+                                                                    />
+
+                                                                    <q-card-section class="q-pb-none">
+                                                                        <div class="text-overline text-orange-9">莫言</div>
+                                                                        <div class="text-subtitle2 text-weight-bold q-mb-xs ellipsis">平凡的世界</div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="Share" />
+                                                                        <q-btn flat color="primary" label="Book" />
+
+                                                                        <q-space />
+
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section class="text-subitle2">
+                                                                                {{ lorem }}
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                            <div class="col-6 col-md-3 q-pa-sm">
+                                                                <q-card flat bordered>
+                                                                    <q-img
+                                                                            src="https://cdn.quasar.dev/img/parallax2.jpg"
+                                                                            style="height:110px"
+                                                                    />
+
+                                                                    <q-card-section class="q-pb-none">
+                                                                        <div class="text-overline text-orange-9">莫言</div>
+                                                                        <div class="text-subtitle2 text-weight-bold q-mb-xs ellipsis">平凡的世界</div>
+                                                                        <div class="text-caption text-grey">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </q-card-section>
+
+                                                                    <q-card-actions>
+                                                                        <q-btn flat color="dark" label="Share" />
+                                                                        <q-btn flat color="primary" label="Book" />
+
+                                                                        <q-space />
+
+                                                                        <q-btn
+                                                                                color="grey"
+                                                                                round
+                                                                                flat
+                                                                                dense
+                                                                                :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                                                                                @click="expanded = !expanded"
+                                                                        />
+                                                                    </q-card-actions>
+
+                                                                    <q-slide-transition>
+                                                                        <div v-show="expanded">
+                                                                            <q-separator />
+                                                                            <q-card-section class="text-subitle2">
+                                                                                {{ lorem }}
+                                                                            </q-card-section>
+                                                                        </div>
+                                                                    </q-slide-transition>
+                                                                </q-card>
+                                                            </div>
+                                                        </div>
                                                     </q-tab-panel>
                                                 </q-tab-panels>
                                             </q-card>
@@ -201,31 +754,10 @@
                                                 </q-card-section>
                                                 <q-card-actions align="right" class="q-pt-none">
                                                     <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="person"></q-icon>
-                                                            作者:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                XZX
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="book"></q-icon>
-                                                            文章字数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="visibility"></q-icon>
-                                                            阅读次数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
+                                                        <q-chip dense>
+                                                            <q-avatar icon="person" color="red" text-color="white" />
+                                                            xzxxxx
+                                                        </q-chip>
                                                     </div>
                                                     <div class="q-pr-sm">
                                                         <q-chip dense>
@@ -233,256 +765,16 @@
                                                             2020-12-05
                                                         </q-chip>
                                                     </div>
-                                                </q-card-actions>
-                                            </q-card>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="q-pa-sm">
-                                            <q-card flat>
-                                                <q-card-section class="q-pb-none">
-                                                    <div class="text-h6 q-mt-sm q-mb-xs">
-                                                        <q-chip square  color="primary" text-color="white" icon="bookmark">
-                                                            Python
-                                                        </q-chip>
-                                                        Title2222
-                                                    </div>
-                                                </q-card-section>
-                                                <q-card-section horizontal>
-                                                    <q-card-section class="col-4 q-pb-none">
-                                                        <q-img
-                                                                class="rounded-borders"
-                                                                :ratio="16/9"
-                                                                src="https://placeimg.com/500/300/nature"
-                                                        />
-                                                    </q-card-section>
-                                                    <q-card-section class="q-pt-md q-pb-none">
-                                                        <div class="text-caption text-grey">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                        </div>
-                                                    </q-card-section>
-                                                </q-card-section>
-                                                <q-card-actions align="right" class="q-pt-none">
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="person"></q-icon>
-                                                            作者:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                XZX
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="book"></q-icon>
-                                                            文章字数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="visibility"></q-icon>
-                                                            阅读次数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
                                                     <div class="q-pr-sm">
                                                         <q-chip dense>
-                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
-                                                            2020-12-05
+                                                            <q-avatar icon="visibility" color="green" text-color="white" />
+                                                            253
                                                         </q-chip>
                                                     </div>
-                                                </q-card-actions>
-                                            </q-card>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="q-pa-sm">
-                                            <q-card flat>
-                                                <q-card-section class="q-pb-none">
-                                                    <div class="text-h6 q-mt-sm q-mb-xs">
-                                                        <q-chip square  color="primary" text-color="white" icon="bookmark">
-                                                            Python
-                                                        </q-chip>
-                                                        Title2222
-                                                    </div>
-                                                </q-card-section>
-                                                <q-card-section horizontal>
-                                                    <q-card-section class="col-4 q-pb-none">
-                                                        <q-img
-                                                                class="rounded-borders"
-                                                                :ratio="16/9"
-                                                                src="https://placeimg.com/500/300/nature"
-                                                        />
-                                                    </q-card-section>
-                                                    <q-card-section class="q-pt-md q-pb-none">
-                                                        <div class="text-caption text-grey">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                        </div>
-                                                    </q-card-section>
-                                                </q-card-section>
-                                                <q-card-actions align="right" class="q-pt-none">
                                                     <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="person"></q-icon>
-                                                            作者:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                XZX
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="book"></q-icon>
-                                                            文章字数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="visibility"></q-icon>
-                                                            阅读次数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <q-chip dense>
-                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
-                                                            2020-12-05
-                                                        </q-chip>
-                                                    </div>
-                                                </q-card-actions>
-                                            </q-card>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="q-pa-sm">
-                                            <q-card flat>
-                                                <q-card-section class="q-pb-none">
-                                                    <div class="text-h6 q-mt-sm q-mb-xs">
-                                                        <q-chip square  color="primary" text-color="white" icon="bookmark">
-                                                            Python
-                                                        </q-chip>
-                                                        Title2222
-                                                    </div>
-                                                </q-card-section>
-                                                <q-card-section horizontal>
-                                                    <q-card-section class="col-4 q-pb-none">
-                                                        <q-img
-                                                                class="rounded-borders"
-                                                                :ratio="16/9"
-                                                                src="https://placeimg.com/500/300/nature"
-                                                        />
-                                                    </q-card-section>
-                                                    <q-card-section class="q-pt-md q-pb-none">
-                                                        <div class="text-caption text-grey">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                        </div>
-                                                    </q-card-section>
-                                                </q-card-section>
-                                                <q-card-actions align="right" class="q-pt-none">
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="person"></q-icon>
-                                                            作者:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                XZX
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="book"></q-icon>
-                                                            文章字数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="visibility"></q-icon>
-                                                            阅读次数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <q-chip dense>
-                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
-                                                            2020-12-05
-                                                        </q-chip>
-                                                    </div>
-                                                </q-card-actions>
-                                            </q-card>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="q-pa-sm">
-                                            <q-card flat>
-                                                <q-card-section class="q-pb-none">
-                                                    <div class="text-h6 q-mt-sm q-mb-xs">
-                                                        <q-chip square  color="primary" text-color="white" icon="bookmark">
-                                                            Python
-                                                        </q-chip>
-                                                        Title2222
-                                                    </div>
-                                                </q-card-section>
-                                                <q-card-section horizontal>
-                                                    <q-card-section class="col-4 q-pb-none">
-                                                        <q-img
-                                                                class="rounded-borders"
-                                                                :ratio="16/9"
-                                                                src="https://placeimg.com/500/300/nature"
-                                                        />
-                                                    </q-card-section>
-                                                    <q-card-section class="q-pt-md q-pb-none">
-                                                        <div class="text-caption text-grey">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                        </div>
-                                                    </q-card-section>
-                                                </q-card-section>
-                                                <q-card-actions align="right" class="q-pt-none">
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="person"></q-icon>
-                                                            作者:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                XZX
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="book"></q-icon>
-                                                            文章字数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <div class="text-subtitle2">
-                                                            <q-icon name="visibility"></q-icon>
-                                                            阅读次数:
-                                                            <q-badge outline align="middle" color="primary">
-                                                                1250
-                                                            </q-badge>
-                                                        </div>
-                                                    </div>
-                                                    <div class="q-pr-sm">
-                                                        <q-chip dense>
-                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
-                                                            2020-12-05
+                                                        <q-chip>
+                                                            <q-avatar color="red" text-color="white" size="sm">字</q-avatar>
+                                                            1520
                                                         </q-chip>
                                                     </div>
                                                 </q-card-actions>
@@ -936,6 +1228,7 @@ export default {
       'camera_front',
       'my_location'
     ],
+    expanded: false,
     record1: '努力变强, 然后越来越嚣张.',
     record: '  Mr.XZX 个人站点, 记录点滴, 记录成长, 分享经验, 拥抱爱和正义, 维护世界和平!',
     fabPos: [ 18, 18 ],
@@ -957,6 +1250,7 @@ export default {
     current: 6,
     panel: 'mails',
     tab: 'mails',
+    sidTab: 'record',
     autoplay: true,
     slide: 'style',
     lorem: 'Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'

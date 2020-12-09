@@ -147,7 +147,7 @@ export default {
         Blog: {
           left: "#00ffee",
           top: "#07b8ac",
-          state: false
+          state: true
         },
         Code: {
           left: "#ffaa54",
@@ -157,7 +157,7 @@ export default {
         Interest: {
           left: "#bfff5e",
           top: "#97eb1a",
-          state: false
+          state: true
         },
         Resume: {
           left: "#64d2fa",
