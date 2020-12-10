@@ -27,7 +27,24 @@ const routes = [
   {
     path: "/blog",
     name: "blog",
-    component: () => import("views/pages/blog/index")
+    component: () => import("views/pages/blog/index"),
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        component: () => import("views/pages/blog/blogHome")
+      },
+      {
+        path: "/detail/:id",
+        name: "detail",
+        component: () => import("views/pages/blog/blogDetail")
+      },
+      {
+        path: "/category",
+        name: "category",
+        component: () => import("views/pages/blog/blogCategory")
+      }
+    ]
   },
   {
     path: "/about",
