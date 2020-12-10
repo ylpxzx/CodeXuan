@@ -6,7 +6,7 @@
                     <div class="col-12 col-md-9 q-pa-sm">
                         <div>
                             <q-banner inline-actions rounded class="bg-primary text-white">
-                                You have lost connection to the internet. This app is offline.
+                                如果发现界面排版很紧凑的情况，请刷新页面.
                             </q-banner>
                         </div>
                     </div>
@@ -731,26 +731,264 @@
                                         <div class="q-pa-sm">
                                             <q-card flat>
                                                 <q-card-section class="q-pb-none">
-                                                    <div class="text-h6 q-mt-sm q-mb-xs">
-                                                        <q-chip square  color="primary" text-color="white" icon="bookmark">
+                                                    <div class="text-h6 q-mt-sm q-mb-xs ellipsis">
+                                                        <q-chip size="sm" square color="primary" text-color="white" icon="bookmark">
                                                             Python
                                                         </q-chip>
-                                                        Title2222
+                                                        <a href="#" class="q-pl-sm" style="text-decoration:none; color: #000000">Go语言从入门到入土</a>
                                                     </div>
                                                 </q-card-section>
-                                                <q-card-section horizontal>
-                                                    <q-card-section class="col-4 q-pb-none">
-                                                        <q-img
-                                                                class="rounded-borders"
-                                                                :ratio="16/9"
-                                                                src="https://placeimg.com/500/300/nature"
-                                                        />
-                                                    </q-card-section>
-                                                    <q-card-section class="q-pt-md q-pb-none">
-                                                        <div class="text-caption text-grey">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-3 q-pr-md">
+                                                            <q-img
+                                                                    class="rounded-borders"
+                                                                    :ratio="16/9"
+                                                                    style="height: 160px"
+                                                                    src="https://placeimg.com/500/300/nature"
+                                                            />
                                                         </div>
-                                                    </q-card-section>
+                                                        <div class="col-12 col-md-9">
+                                                            <q-item-label lines="8">
+                                                                <div class="text-caption text-grey q-pt-xs">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                </div>
+                                                            </q-item-label>
+                                                        </div>
+                                                    </div>
+                                                </q-card-section>
+                                                <q-card-actions align="right" class="q-pt-none">
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="person" color="red" text-color="white" />
+                                                            xzxxxx
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
+                                                            2020-12-05
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="visibility" color="green" text-color="white" />
+                                                            253
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip>
+                                                            <q-avatar color="red" text-color="white" size="sm">字</q-avatar>
+                                                            1520
+                                                        </q-chip>
+                                                    </div>
+                                                </q-card-actions>
+                                            </q-card>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="q-pa-sm">
+                                            <q-card flat>
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="text-h6 q-mt-sm q-mb-xs ellipsis">
+                                                        <q-chip size="sm" square color="primary" text-color="white" icon="bookmark">
+                                                            Python
+                                                        </q-chip>
+                                                        <a href="#" class="q-pl-sm" style="text-decoration:none; color: #000000">Go语言从入门到入土</a>
+                                                    </div>
+                                                </q-card-section>
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-3 q-pr-md">
+                                                            <q-img
+                                                                    class="rounded-borders"
+                                                                    :ratio="16/9"
+                                                                    style="height: 160px"
+                                                                    src="https://placeimg.com/500/300/nature"
+                                                            />
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <q-item-label lines="8">
+                                                                <div class="text-caption text-grey q-pt-xs">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                </div>
+                                                            </q-item-label>
+                                                        </div>
+                                                    </div>
+                                                </q-card-section>
+                                                <q-card-actions align="right" class="q-pt-none">
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="person" color="red" text-color="white" />
+                                                            xzxxxx
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
+                                                            2020-12-05
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="visibility" color="green" text-color="white" />
+                                                            253
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip>
+                                                            <q-avatar color="red" text-color="white" size="sm">字</q-avatar>
+                                                            1520
+                                                        </q-chip>
+                                                    </div>
+                                                </q-card-actions>
+                                            </q-card>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="q-pa-sm">
+                                            <q-card flat>
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="text-h6 q-mt-sm q-mb-xs ellipsis">
+                                                        <q-chip size="sm" square color="primary" text-color="white" icon="bookmark">
+                                                            Python
+                                                        </q-chip>
+                                                        <a href="#" class="q-pl-sm" style="text-decoration:none; color: #000000">Go语言从入门到入土</a>
+                                                    </div>
+                                                </q-card-section>
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-3 q-pr-md">
+                                                            <q-img
+                                                                    class="rounded-borders"
+                                                                    :ratio="16/9"
+                                                                    style="height: 160px"
+                                                                    src="https://placeimg.com/500/300/nature"
+                                                            />
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <q-item-label lines="8">
+                                                                <div class="text-caption text-grey q-pt-xs">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                </div>
+                                                            </q-item-label>
+                                                        </div>
+                                                    </div>
+                                                </q-card-section>
+                                                <q-card-actions align="right" class="q-pt-none">
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="person" color="red" text-color="white" />
+                                                            xzxxxx
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="bookmark" color="primary" text-color="white" />
+                                                            2020-12-05
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip dense>
+                                                            <q-avatar icon="visibility" color="green" text-color="white" />
+                                                            253
+                                                        </q-chip>
+                                                    </div>
+                                                    <div class="q-pr-sm">
+                                                        <q-chip>
+                                                            <q-avatar color="red" text-color="white" size="sm">字</q-avatar>
+                                                            1520
+                                                        </q-chip>
+                                                    </div>
+                                                </q-card-actions>
+                                            </q-card>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="q-pa-sm">
+                                            <q-card flat>
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="text-h6 q-mt-sm q-mb-xs ellipsis">
+                                                        <q-chip size="sm" square color="primary" text-color="white" icon="bookmark">
+                                                            Python
+                                                        </q-chip>
+                                                        <a href="#" class="q-pl-sm" style="text-decoration:none; color: #000000">Go语言从入门到入土</a>
+                                                    </div>
+                                                </q-card-section>
+                                                <q-card-section class="q-pb-none">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-3 q-pr-md">
+                                                            <q-img
+                                                                    class="rounded-borders"
+                                                                    :ratio="16/9"
+                                                                    style="height: 160px"
+                                                                    src="https://placeimg.com/500/300/nature"
+                                                            />
+                                                        </div>
+                                                        <div class="col-12 col-md-9">
+                                                            <q-item-label lines="8">
+                                                                <div class="text-caption text-grey q-pt-xs">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                </div>
+                                                            </q-item-label>
+                                                        </div>
+                                                    </div>
                                                 </q-card-section>
                                                 <q-card-actions align="right" class="q-pt-none">
                                                     <div class="q-pr-sm">
@@ -815,7 +1053,7 @@
                                                 </q-item-label>
                                             </q-item-section>
                                         </q-item>
-                                        <q-card-section class="text-caption text-grey text-weight-medium">
+                                        <q-card-section class="text-caption text-grey text-weight-medium q-pt-none">
                                             {{ record }}
                                         </q-card-section>
                                         <q-card-section align="center" class="q-pt-none">
@@ -849,6 +1087,9 @@
                                                 <q-avatar rounded style="width: 29px" color="deep-purple" text-color="white">150</q-avatar>
                                                 转载
                                             </q-chip>
+                                        </q-card-section>
+                                        <q-card-section align="center" class="q-pt-none">
+                                            <q-btn round color="primary" icon="search" />
                                         </q-card-section>
                                     </q-card>
                                 </div>
@@ -1201,14 +1442,19 @@
                 </div>
                 <q-page-sticky position="bottom-right" :offset="fabPos">
                     <q-fab
-                            icon="add"
-                            direction="up"
-                            color="accent"
-                            :disable="draggingFab"
-                            v-touch-pan.prevent.mouse="moveFab"
+                            color="amber"
+                            text-color="black"
+                            icon="keyboard_arrow_left"
+                            v-model="fab1"
+                            label-position="top"
+                            label-class="bg-grey-3 text-purple"
+                            external-label
+                            direction="left"
                     >
-                        <q-fab-action @click="onClick" color="primary" icon="person_add" :disable="draggingFab" />
-                        <q-fab-action @click="onClick" color="primary" icon="mail" :disable="draggingFab" />
+                        <q-fab-action label-class="bg-grey-3 text-grey-8" external-label label-position="top" color="primary" @click="onClick" icon="mail" label="博文" />
+                        <q-fab-action label-class="bg-grey-3 text-grey-8" external-label label-position="top" color="secondary" @click="onClick" icon="alarm" label="项目" />
+                        <q-fab-action label-class="bg-grey-3 text-grey-8" external-label label-position="top" color="orange" @click="onClick" icon="airplay" label="兴趣" />
+                        <q-fab-action label-class="bg-grey-3 text-grey-8" external-label label-position="top" color="accent" @click="onClick" icon="room" label="简历" />
                     </q-fab>
                 </q-page-sticky>
             </q-page>
@@ -1221,6 +1467,7 @@ export default {
   name: "blogHome",
   data () {
     return {
+    fab1: true,
     icons: [
       'navigation',
       'add_a_photo',
@@ -1249,7 +1496,7 @@ export default {
     },
     current: 6,
     panel: 'mails',
-    tab: 'mails',
+    tab: 'alarms',
     sidTab: 'record',
     autoplay: true,
     slide: 'style',

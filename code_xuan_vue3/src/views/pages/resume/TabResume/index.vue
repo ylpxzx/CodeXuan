@@ -903,13 +903,6 @@ export default {
   data() {
     return {
       fab1: true,
-      fab2: true,
-      check1: true,
-      check2: false,
-      check3: false,
-      notif1: true,
-      notif2: true,
-      notif3: false,
       volume: 6,
       brightness: 3,
       mic: 8,

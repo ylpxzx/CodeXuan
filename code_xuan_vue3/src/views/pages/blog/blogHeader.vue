@@ -9,12 +9,6 @@
                 <q-tab name="tab3" label="分类" />
                 <q-tab name="tab4" label="关于我" />
                 <q-tab name="tab5" label="留言" />
-                <q-btn
-                    round
-                    color="primary"
-                    size="sm"
-                    icon="search"
-                />
             </q-tabs>
         </q-toolbar>
     </div>
