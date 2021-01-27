@@ -64,9 +64,7 @@
                 <q-tabs
                         v-model="tab"
                         dense
-                        class="text-grey"
-                        active-color="primary"
-                        indicator-color="primary"
+                        class="text-white bg-primary"
                         align="justify"
                         narrow-indicator
                 >
@@ -157,58 +155,52 @@
                     </q-tab-panel>
 
                     <q-tab-panel name="alarms">
-                        <q-list class="q-pr-none q-pl-none">
+                        <q-list>
                             <q-item clickable>
-                                <q-item-section top thumbnail class="q-ml-none">
-                                    <img src="~assets/images/test_img/2007035.jpg" preview="7" class="q-img rounded-borders" style="height: 100%">
+                                <q-item-section align="center" top thumbnail>
+                                    <img src="~assets/images/test_img/2007035.jpg" preview="7" class="q-img" style="height: 100%">
                                 </q-item-section>
-                                <q-item-section>
-                                    <q-item-label>Single line item Single line item Single line item Single line item</q-item-label>
+                                <q-item-section class="text-caption">
+                                    <q-item-label lines="2">Single line item Single line item Single line item Single line item</q-item-label>
                                     <q-item-label>
-                                        <q-chip dense size="sm">
-                                            <q-avatar color="teal" text-color="white" />
-                                            Python
-                                        </q-chip>
-                                        <q-chip dense size="sm">
-                                            <q-avatar color="primary" text-color="white" />
-                                            2020-12-07
-                                        </q-chip>
+                                        <q-badge class="q-mr-sm" outline color="teal" label="Python" />
+                                        <q-badge outline color="primary" label="2020-12-12" />
                                     </q-item-label>
                                 </q-item-section>
                             </q-item>
                             <q-item clickable>
-                                <q-item-section top thumbnail class="q-ml-none">
-                                    <img src="~assets/images/test_img/2020126.jpg" preview="7" class="q-img rounded-borders" style="height: 100%">
+                                <q-item-section top thumbnail>
+                                    <img src="~assets/images/test_img/2020126.jpg" preview="7" class="q-img" style="height: 100%">
                                 </q-item-section>
-                                <q-item-section>
-                                    <q-item-label>Single line item Single line item Single line item Single line item</q-item-label>
+                                <q-item-section  class="text-caption">
+                                    <q-item-label lines="2">Single line item Single line item Single line item Single line item</q-item-label>
                                     <q-item-label>
-                                        <q-chip dense size="sm">
-                                            <q-avatar color="teal" text-color="white" />
-                                            Python
-                                        </q-chip>
-                                        <q-chip dense size="sm">
-                                            <q-avatar color="primary" text-color="white" />
-                                            2020-12-07
-                                        </q-chip>
+                                        <q-badge class="q-mr-sm" outline color="teal" label="Python" />
+                                        <q-badge outline color="primary" label="2020-12-12" />
                                     </q-item-label>
                                 </q-item-section>
                             </q-item>
                             <q-item clickable>
-                                <q-item-section top thumbnail class="q-ml-none">
-                                    <img src="~assets/images/test_img/2008524.jpg" preview="7" class="q-img rounded-borders" style="height: 100%">
+                                <q-item-section top thumbnail>
+                                    <img src="~assets/images/test_img/2008524.jpg" preview="7" class="q-img" style="height: 100%">
                                 </q-item-section>
-                                <q-item-section>
-                                    <q-item-label>Single line item Single line item Single line item Single line item</q-item-label>
+                                <q-item-section class="text-caption">
+                                    <q-item-label lines="2">Single line item Single line item Single line item Single line item</q-item-label>
                                     <q-item-label>
-                                        <q-chip dense size="sm">
-                                            <q-avatar color="teal" text-color="white" />
-                                            Python
-                                        </q-chip>
-                                        <q-chip dense size="sm">
-                                            <q-avatar color="primary" text-color="white" />
-                                            2020-12-07
-                                        </q-chip>
+                                        <q-badge class="q-mr-sm" outline color="teal" label="Python" />
+                                        <q-badge outline color="primary" label="2020-12-12" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                            <q-item clickable>
+                                <q-item-section top thumbnail>
+                                    <img src="~assets/images/test_img/2008524.jpg" preview="7" class="q-img" style="height: 100%">
+                                </q-item-section>
+                                <q-item-section class="text-caption">
+                                    <q-item-label lines="2">Single line item Single line item Single line item Single line item</q-item-label>
+                                    <q-item-label>
+                                        <q-badge class="q-mr-sm" outline color="teal" label="Python" />
+                                        <q-badge outline color="primary" label="2020-12-12" />
                                     </q-item-label>
                                 </q-item-section>
                             </q-item>
@@ -339,7 +331,7 @@
         </div>
         <div class="row q-pb-md">
             <q-card flat style="width: 100%">
-                <q-card-section class="bg-purple text-white">
+                <q-card-section class="bg-primary text-white">
                     <div class="text-h7">标签云</div>
                 </q-card-section>
                 <q-card-section>
@@ -366,7 +358,7 @@
         </div>
         <div class="row q-pb-md">
             <q-card flat style="width: 100%">
-                <q-card-section class="bg-teal text-white">
+                <q-card-section class="bg-primary text-white">
                     <div class="text-h7">分类</div>
                 </q-card-section>
                 <q-card-section>
@@ -393,7 +385,7 @@
         </div>
         <div class="row q-pb-md">
             <q-card flat style="width: 100%">
-                <q-card-section class="bg-grey-8 text-white">
+                <q-card-section class="bg-primary text-white">
                     <div class="text-h7">友情链接</div>
                     <!--                                <div class="text-subtitle2">by John Doe</div>-->
                 </q-card-section>

@@ -6,7 +6,7 @@
           <div class="row justify-center">
             <div class="col-12 col-md-9 q-pa-sm">
               <div>
-                <q-banner inline-actions rounded class="bg-primary text-white">
+                <q-banner inline-actions rounded class="bg-teal text-white">
                   如果发现界面排版很紧凑的情况，请刷新页面.
                 </q-banner>
               </div>

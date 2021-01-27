@@ -20,7 +20,7 @@
                         @mouseenter="autoplay = false"
                         @mouseleave="autoplay = true"
                         height="310px"
-                        class="bg-purple text-white shadow-1 rounded-borders"
+                        class="bg-primary text-white shadow-1 rounded-borders"
                 >
                     <q-carousel-slide name="style" class="column no-wrap flex-center">
                         <q-icon name="style" size="56px" />
@@ -51,14 +51,14 @@
             <div class="col-12 col-md-4 q-pa-sm">
                 <div class="column">
                     <q-scroll-area
-                            :thumb-style="thumbStyle"
-                            :bar-style="barStyle"
-                            style="height: 311px;"
+                        :thumb-style="thumbStyle"
+                        :bar-style="barStyle"
+                        style="height: 311px;"
                     >
                         <div class="col q-pb-sm">
                             <q-card flat>
                                 <q-card-section horizontal>
-                                    <q-card-section class="col-4">
+                                    <q-card-section class="col-4 q-pa-sm">
                                         <img src="~assets/images/test_img/2001597.jpg" preview="1" class="q-img rounded-borders" style="height: 100%">
                                         <!--                                                                <q-img-->
                                         <!--                                                                        class="rounded-borders"-->
@@ -66,9 +66,9 @@
                                         <!--                                                                        src="https://placeimg.com/500/300/nature"-->
                                         <!--                                                                />-->
                                     </q-card-section>
-                                    <q-card-section>
-                                        <div class="text-caption text-grey">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    <q-card-section class="q-pa-sm ellipsis-3-lines">
+                                        <div class="text-caption text-grey ellipsis-3-lines">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.incididunt.incididunt,incididunt.incididunt.incididunt.
                                         </div>
                                     </q-card-section>
                                 </q-card-section>
@@ -77,12 +77,12 @@
                         <div class="col q-pb-sm">
                             <q-card flat>
                                 <q-card-section horizontal>
-                                    <q-card-section class="col-4">
+                                    <q-card-section class="col-4 q-pa-sm">
                                         <img src="~assets/images/test_img/2001746.jpg" preview="2" class="q-img rounded-borders" style="height: 100%">
                                     </q-card-section>
-                                    <q-card-section>
-                                        <div class="text-caption text-grey">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    <q-card-section class="q-pa-sm ellipsis-3-lines">
+                                        <div class="text-caption text-grey ellipsis-3-lines">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.incididunt.incididunt,incididunt.incididunt.incididunt.
                                         </div>
                                     </q-card-section>
                                 </q-card-section>
@@ -91,12 +91,12 @@
                         <div class="col q-pb-sm">
                             <q-card flat>
                                 <q-card-section horizontal>
-                                    <q-card-section class="col-4">
+                                    <q-card-section class="col-4 q-pa-sm">
                                         <img src="~assets/images/test_img/2003345.jpg" preview="3" class="q-img rounded-borders" style="height: 100%">
                                     </q-card-section>
-                                    <q-card-section>
-                                        <div class="text-caption text-grey">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    <q-card-section class="q-pa-sm ellipsis-3-lines">
+                                        <div class="text-caption text-grey ellipsis-3-lines">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.incididunt.incididunt,incididunt.incididunt.incididunt.
                                         </div>
                                     </q-card-section>
                                 </q-card-section>
@@ -105,12 +105,12 @@
                         <div class="col q-pb-sm">
                             <q-card flat>
                                 <q-card-section horizontal>
-                                    <q-card-section class="col-4">
+                                    <q-card-section class="col-4 q-pa-sm">
                                         <img src="~assets/images/test_img/2005678.jpg" preview="4" class="q-img rounded-borders" style="height: 100%">
                                     </q-card-section>
-                                    <q-card-section>
-                                        <div class="text-caption text-grey">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                    <q-card-section class="q-pa-sm ellipsis-3-lines">
+                                        <div class="text-caption text-grey ellipsis-3-lines">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.incididunt.incididunt,incididunt.incididunt.incididunt.
                                         </div>
                                     </q-card-section>
                                 </q-card-section>
@@ -249,217 +249,58 @@
                             </q-tab-panel>
 
                             <q-tab-panel name="reprinted">
-                                <div class="row" style="height: 270px">
-                                    <div class="col-6 col-md-3 q-pa-sm">
-                                        <q-card flat bordered>
-                                            <q-card-section>
-                                                <q-chip dense square color="primary" text-color="white" icon="bookmark">
-                                                    Python
-                                                </q-chip>
-                                                <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
-                                                    OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
-                                                        OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    </q-tooltip>
-                                                </div>
-                                                <div class="text-caption text-grey">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                </div>
-                                            </q-card-section>
-
-                                            <q-card-actions>
-                                                <q-btn flat color="dark" label="信息" />
-                                                <q-space />
-                                                <q-btn
-                                                        color="grey"
-                                                        round
-                                                        flat
-                                                        dense
-                                                        :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                        @click="expanded = !expanded"
-                                                />
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                                <div v-show="expanded">
-                                                    <q-separator />
-                                                    <q-card-section>
-                                                        <q-chip square>作者：蓝星书生</q-chip>
-                                                        <q-chip square>来源：知乎</q-chip>
-                                                    </q-card-section>
-                                                </div>
-                                            </q-slide-transition>
-                                        </q-card>
-                                    </div>
-                                    <div class="col-6 col-md-3 q-pa-sm">
-                                        <q-card flat bordered>
-                                            <q-card-section>
-                                                <q-chip dense square color="primary" text-color="white" icon="bookmark">
-                                                    Python
-                                                </q-chip>
-                                                <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
-                                                    OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
-                                                        OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    </q-tooltip>
-                                                </div>
-                                                <div class="text-caption text-grey">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                </div>
-                                            </q-card-section>
-
-                                            <q-card-actions>
-                                                <q-btn flat color="dark" label="信息" />
-                                                <q-space />
-                                                <q-btn
-                                                        color="grey"
-                                                        round
-                                                        flat
-                                                        dense
-                                                        :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                        @click="expanded = !expanded"
-                                                />
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                                <div v-show="expanded">
-                                                    <q-separator />
-                                                    <q-card-section>
-                                                        <q-chip square>作者：蓝星书生</q-chip>
-                                                        <q-chip square>来源：知乎</q-chip>
-                                                    </q-card-section>
-                                                </div>
-                                            </q-slide-transition>
-                                        </q-card>
-                                    </div>
-                                    <div class="col-6 col-md-3 q-pa-sm">
-                                        <q-card flat bordered>
-                                            <q-card-section>
-                                                <q-chip dense square color="primary" text-color="white" icon="bookmark">
-                                                    Python
-                                                </q-chip>
-                                                <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
-                                                    OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
-                                                        OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    </q-tooltip>
-                                                </div>
-                                                <div class="text-caption text-grey">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                </div>
-                                            </q-card-section>
-
-                                            <q-card-actions>
-                                                <q-btn flat color="dark" label="信息" />
-                                                <q-space />
-                                                <q-btn
-                                                        color="grey"
-                                                        round
-                                                        flat
-                                                        dense
-                                                        :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                        @click="expanded = !expanded"
-                                                />
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                                <div v-show="expanded">
-                                                    <q-separator />
-                                                    <q-card-section>
-                                                        <q-chip square>作者：蓝星书生</q-chip>
-                                                        <q-chip square>来源：知乎</q-chip>
-                                                    </q-card-section>
-                                                </div>
-                                            </q-slide-transition>
-                                        </q-card>
-                                    </div>
-                                    <div class="col-6 col-md-3 q-pa-sm">
-                                        <q-card flat bordered>
-                                            <q-card-section>
-                                                <q-chip dense square color="primary" text-color="white" icon="bookmark">
-                                                    Python
-                                                </q-chip>
-                                                <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
-                                                    OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
-                                                        OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    </q-tooltip>
-                                                </div>
-                                                <div class="text-caption text-grey">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                </div>
-                                            </q-card-section>
-
-                                            <q-card-actions>
-                                                <q-btn flat color="dark" label="信息" />
-                                                <q-space />
-                                                <q-btn
-                                                        color="grey"
-                                                        round
-                                                        flat
-                                                        dense
-                                                        :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                        @click="expanded = !expanded"
-                                                />
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                                <div v-show="expanded">
-                                                    <q-separator />
-                                                    <q-card-section>
-                                                        <q-chip square>作者：蓝星书生</q-chip>
-                                                        <q-chip square>来源：知乎</q-chip>
-                                                    </q-card-section>
-                                                </div>
-                                            </q-slide-transition>
-                                        </q-card>
-                                    </div>
-                                    <div class="col-6 col-md-3 q-pa-sm">
-                                        <q-card flat bordered>
-                                            <q-card-section>
-                                                <q-chip dense square color="primary" text-color="white" icon="bookmark">
-                                                    Python
-                                                </q-chip>
-                                                <div class="text-overline text-orange-9 ellipsis ellipsis-2-lines">
-                                                    OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
-                                                        OverlineOverlineOverlineOverlineOverlineOverlineOverlineOverlineOverline
-                                                    </q-tooltip>
-                                                </div>
-                                                <div class="text-caption text-grey">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                </div>
-                                            </q-card-section>
-
-                                            <q-card-actions>
-                                                <q-btn flat color="dark" label="信息" />
-                                                <q-space />
-                                                <q-btn
-                                                        color="grey"
-                                                        round
-                                                        flat
-                                                        dense
-                                                        :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                        @click="expanded = !expanded"
-                                                />
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                                <div v-show="expanded">
-                                                    <q-separator />
-                                                    <q-card-section>
-                                                        <q-chip square>作者：蓝星书生</q-chip>
-                                                        <q-chip square>来源：知乎</q-chip>
-                                                    </q-card-section>
-                                                </div>
-                                            </q-slide-transition>
-                                        </q-card>
-                                    </div>
-                                </div>
+                                <q-scroll-area
+                                        :thumb-style="thumbStyle"
+                                        :bar-style="barStyle"
+                                        style="height: 320px;"
+                                >
+                                <q-list>
+                                    <q-item clickable v-for="(value, index) in 15" :key="index">
+                                        <q-item-section side>
+                                            <q-icon size="xs" color="primary" class="q-pr-sm">{{value}}</q-icon>
+                                        </q-item-section>
+                                        <q-item-section>
+                                            <q-item-label lines="1">Single line itemSingle line itemSingle line itemSingle line itemSingle line item</q-item-label>
+                                            <q-tooltip content-class="bg-primary">
+                                                Single line itemSingle line itemSingle line itemSingle line itemSingle line item
+                                            </q-tooltip>
+                                        </q-item-section>
+                                        <q-item-section side>
+                                            <q-chip dense>
+                                                <q-avatar icon="person" color="teal" text-color="white" />
+                                                xzxxxxxxxxx
+                                            </q-chip>
+                                        </q-item-section>
+                                        <q-item-section side>
+                                            <q-chip dense>
+                                                <q-avatar icon="bookmark" color="primary" text-color="white" />
+                                                Python
+                                            </q-chip>
+                                        </q-item-section>
+                                        <q-item-section side>
+                                            <q-chip dense>
+                                                <q-avatar icon="insert_link" color="orange" text-color="white" />
+                                                知乎
+                                            </q-chip>
+                                        </q-item-section>
+                                        <q-item-section side>
+                                            <q-chip>
+                                                <q-avatar color="blue" text-color="white" size="sm">转</q-avatar>
+                                                2020-12-21 12:12:12
+                                            </q-chip>
+                                        </q-item-section>
+                                    </q-item>
+                            </q-list>
+                                </q-scroll-area>
                             </q-tab-panel>
 
                             <q-tab-panel name="book">
-                                <div class="row" style="height: 320px">
+                                <q-scroll-area
+                                        :thumb-style="thumbStyle"
+                                        :bar-style="barStyle"
+                                        style="height: 320px;"
+                                >
+                                <div class="row">
                                     <div class="col-6 col-md-3 q-pa-sm">
                                         <q-card flat bordered>
                                             <q-img
@@ -707,6 +548,7 @@
                                         </q-card>
                                     </div>
                                 </div>
+                                </q-scroll-area>
                             </q-tab-panel>
                         </q-tab-panels>
                     </q-card>
@@ -792,7 +634,7 @@
             <div class="q-pa-lg">
                 <q-pagination
                         v-model="current"
-                        color="purple"
+                        color="primary"
                         :max="10"
                         :max-pages="6"
                         :boundary-numbers="true"
